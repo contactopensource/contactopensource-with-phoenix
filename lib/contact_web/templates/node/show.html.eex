@@ -1,0 +1,68 @@
+<h1>Show Node</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @node.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @node.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @node.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @node.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @node.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @node.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @node.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @node.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Text:</strong>
+    <%= @node.text %>
+  </li>
+
+  <li>
+    <strong>Json:</strong>
+    <%= @node.json %>
+  </li>
+
+  <li>
+    <strong>Xml:</strong>
+    <%= @node.xml %>
+  </li>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @node.number %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.node_path(@conn, :edit, @node) %></span>
+<span><%= link "Back", to: Routes.node_path(@conn, :index) %></span>

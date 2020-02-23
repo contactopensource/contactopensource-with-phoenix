@@ -1,0 +1,48 @@
+<h1>Listing Nodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenant</th>
+      <th>Type uri</th>
+      <th>Type text</th>
+      <th>State uri</th>
+      <th>State text</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by text</th>
+      <th>Text</th>
+      <th>Json</th>
+      <th>Xml</th>
+      <th>Number</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for node <- @nodes do %>
+    <tr>
+      <td><%= node.tenant_id %></td>
+      <td><%= node.type_uri %></td>
+      <td><%= node.type_text %></td>
+      <td><%= node.state_uri %></td>
+      <td><%= node.state_text %></td>
+      <td><%= node.updated_at_timestamp_utc %></td>
+      <td><%= node.updated_at_clock_count %></td>
+      <td><%= node.updated_by_text %></td>
+      <td><%= node.text %></td>
+      <td><%= node.json %></td>
+      <td><%= node.xml %></td>
+      <td><%= node.number %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.node_path(@conn, :show, node) %></span>
+        <span><%= link "Edit", to: Routes.node_path(@conn, :edit, node) %></span>
+        <span><%= link "Delete", to: Routes.node_path(@conn, :delete, node), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Node", to: Routes.node_path(@conn, :new) %></span>

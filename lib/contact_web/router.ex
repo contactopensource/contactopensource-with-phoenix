@@ -17,10 +17,13 @@ defmodule ContactWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/nodes", NodeController
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ContactWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", ContactWeb.Api, as: :api do
+    pipe_through :api
+
+    resources "/nodes", NodeController
+  end
+
 end
