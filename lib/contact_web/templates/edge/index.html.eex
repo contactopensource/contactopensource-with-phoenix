@@ -1,0 +1,80 @@
+<h1>Listing Edges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenant</th>
+      <th>Type uri</th>
+      <th>Type text</th>
+      <th>State uri</th>
+      <th>State text</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by text</th>
+      <th>Subject uri</th>
+      <th>Subject database</th>
+      <th>Subject schema</th>
+      <th>Subject table</th>
+      <th>Subject</th>
+      <th>Predicate uri</th>
+      <th>Predicate database</th>
+      <th>Predicate schema</th>
+      <th>Predicate table</th>
+      <th>Predicate</th>
+      <th>Object uri</th>
+      <th>Object database</th>
+      <th>Object schema</th>
+      <th>Object table</th>
+      <th>Object</th>
+      <th>Start at timestamp utc</th>
+      <th>Stop at timestamp utc</th>
+      <th>Count</th>
+      <th>Weight</th>
+      <th>Probability</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for edge <- @edges do %>
+    <tr>
+      <td><%= edge.tenant_id %></td>
+      <td><%= edge.type_uri %></td>
+      <td><%= edge.type_text %></td>
+      <td><%= edge.state_uri %></td>
+      <td><%= edge.state_text %></td>
+      <td><%= edge.updated_at_timestamp_utc %></td>
+      <td><%= edge.updated_at_clock_count %></td>
+      <td><%= edge.updated_by_text %></td>
+      <td><%= edge.subject_uri %></td>
+      <td><%= edge.subject_database %></td>
+      <td><%= edge.subject_schema %></td>
+      <td><%= edge.subject_table %></td>
+      <td><%= edge.subject_id %></td>
+      <td><%= edge.predicate_uri %></td>
+      <td><%= edge.predicate_database %></td>
+      <td><%= edge.predicate_schema %></td>
+      <td><%= edge.predicate_table %></td>
+      <td><%= edge.predicate_id %></td>
+      <td><%= edge.object_uri %></td>
+      <td><%= edge.object_database %></td>
+      <td><%= edge.object_schema %></td>
+      <td><%= edge.object_table %></td>
+      <td><%= edge.object_id %></td>
+      <td><%= edge.start_at_timestamp_utc %></td>
+      <td><%= edge.stop_at_timestamp_utc %></td>
+      <td><%= edge.count %></td>
+      <td><%= edge.weight %></td>
+      <td><%= edge.probability %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.edge_path(@conn, :show, edge) %></span>
+        <span><%= link "Edit", to: Routes.edge_path(@conn, :edit, edge) %></span>
+        <span><%= link "Delete", to: Routes.edge_path(@conn, :delete, edge), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Edge", to: Routes.edge_path(@conn, :new) %></span>

@@ -1,0 +1,148 @@
+<h1>Show Edge</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @edge.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @edge.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @edge.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @edge.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @edge.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @edge.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @edge.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @edge.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Subject uri:</strong>
+    <%= @edge.subject_uri %>
+  </li>
+
+  <li>
+    <strong>Subject database:</strong>
+    <%= @edge.subject_database %>
+  </li>
+
+  <li>
+    <strong>Subject schema:</strong>
+    <%= @edge.subject_schema %>
+  </li>
+
+  <li>
+    <strong>Subject table:</strong>
+    <%= @edge.subject_table %>
+  </li>
+
+  <li>
+    <strong>Subject:</strong>
+    <%= @edge.subject_id %>
+  </li>
+
+  <li>
+    <strong>Predicate uri:</strong>
+    <%= @edge.predicate_uri %>
+  </li>
+
+  <li>
+    <strong>Predicate database:</strong>
+    <%= @edge.predicate_database %>
+  </li>
+
+  <li>
+    <strong>Predicate schema:</strong>
+    <%= @edge.predicate_schema %>
+  </li>
+
+  <li>
+    <strong>Predicate table:</strong>
+    <%= @edge.predicate_table %>
+  </li>
+
+  <li>
+    <strong>Predicate:</strong>
+    <%= @edge.predicate_id %>
+  </li>
+
+  <li>
+    <strong>Object uri:</strong>
+    <%= @edge.object_uri %>
+  </li>
+
+  <li>
+    <strong>Object database:</strong>
+    <%= @edge.object_database %>
+  </li>
+
+  <li>
+    <strong>Object schema:</strong>
+    <%= @edge.object_schema %>
+  </li>
+
+  <li>
+    <strong>Object table:</strong>
+    <%= @edge.object_table %>
+  </li>
+
+  <li>
+    <strong>Object:</strong>
+    <%= @edge.object_id %>
+  </li>
+
+  <li>
+    <strong>Start at timestamp utc:</strong>
+    <%= @edge.start_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Stop at timestamp utc:</strong>
+    <%= @edge.stop_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Count:</strong>
+    <%= @edge.count %>
+  </li>
+
+  <li>
+    <strong>Weight:</strong>
+    <%= @edge.weight %>
+  </li>
+
+  <li>
+    <strong>Probability:</strong>
+    <%= @edge.probability %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.edge_path(@conn, :edit, @edge) %></span>
+<span><%= link "Back", to: Routes.edge_path(@conn, :index) %></span>

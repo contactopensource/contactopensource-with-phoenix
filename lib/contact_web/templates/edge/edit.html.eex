@@ -1,0 +1,5 @@
+<h1>Edit Edge</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.edge_path(@conn, :update, @edge)) %>
+
+<span><%= link "Back", to: Routes.edge_path(@conn, :index) %></span>

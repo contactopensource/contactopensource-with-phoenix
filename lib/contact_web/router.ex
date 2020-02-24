@@ -18,12 +18,14 @@ defmodule ContactWeb.Router do
 
     get "/", PageController, :index
     resources "/nodes", NodeController
+    resources "/edges", EdgeController
   end
 
   scope "/api", ContactWeb.Api, as: :api do
     pipe_through :api
 
     resources "/nodes", NodeController
+    resources "/edges", EdgeController
   end
 
 end
