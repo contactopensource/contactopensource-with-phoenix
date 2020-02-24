@@ -1,0 +1,91 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :tenant_id %>
+  <%= text_input f, :tenant_id %>
+  <%= error_tag f, :tenant_id %>
+
+  <%= label f, :type_uri %>
+  <%= textarea f, :type_uri %>
+  <%= error_tag f, :type_uri %>
+
+  <%= label f, :type_text %>
+  <%= textarea f, :type_text %>
+  <%= error_tag f, :type_text %>
+
+  <%= label f, :state_uri %>
+  <%= textarea f, :state_uri %>
+  <%= error_tag f, :state_uri %>
+
+  <%= label f, :state_text %>
+  <%= textarea f, :state_text %>
+  <%= error_tag f, :state_text %>
+
+  <%= label f, :updated_at_timestamp_utc %>
+  <%= datetime_select f, :updated_at_timestamp_utc %>
+  <%= error_tag f, :updated_at_timestamp_utc %>
+
+  <%= label f, :updated_at_clock_count %>
+  <%= number_input f, :updated_at_clock_count %>
+  <%= error_tag f, :updated_at_clock_count %>
+
+  <%= label f, :updated_by_text %>
+  <%= textarea f, :updated_by_text %>
+  <%= error_tag f, :updated_by_text %>
+
+  <%= label f, :text %>
+  <%= textarea f, :text %>
+  <%= error_tag f, :text %>
+
+  <%= label f, :language_code %>
+  <%= textarea f, :language_code %>
+  <%= error_tag f, :language_code %>
+
+  <%= label f, :country_code %>
+  <%= textarea f, :country_code %>
+  <%= error_tag f, :country_code %>
+
+  <%= label f, :script_code %>
+  <%= textarea f, :script_code %>
+  <%= error_tag f, :script_code %>
+
+  <%= label f, :region_code %>
+  <%= textarea f, :region_code %>
+  <%= error_tag f, :region_code %>
+
+  <%= label f, :variant_code %>
+  <%= textarea f, :variant_code %>
+  <%= error_tag f, :variant_code %>
+
+  <%= label f, :decimal_separator %>
+  <%= textarea f, :decimal_separator %>
+  <%= error_tag f, :decimal_separator %>
+
+  <%= label f, :grouping_separator %>
+  <%= textarea f, :grouping_separator %>
+  <%= error_tag f, :grouping_separator %>
+
+  <%= label f, :currency_code %>
+  <%= textarea f, :currency_code %>
+  <%= error_tag f, :currency_code %>
+
+  <%= label f, :currency_symbol %>
+  <%= textarea f, :currency_symbol %>
+  <%= error_tag f, :currency_symbol %>
+
+  <%= label f, :quotation_start_delimiter %>
+  <%= textarea f, :quotation_start_delimiter %>
+  <%= error_tag f, :quotation_start_delimiter %>
+
+  <%= label f, :quotation_stop_delimiter %>
+  <%= textarea f, :quotation_stop_delimiter %>
+  <%= error_tag f, :quotation_stop_delimiter %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

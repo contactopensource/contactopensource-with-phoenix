@@ -1,0 +1,5 @@
+<h1>Edit Locale</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.locale_path(@conn, :update, @locale)) %>
+
+<span><%= link "Back", to: Routes.locale_path(@conn, :index) %></span>

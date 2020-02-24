@@ -19,6 +19,7 @@ defmodule ContactWeb.Router do
     get "/", PageController, :index
     resources "/nodes", NodeController
     resources "/edges", EdgeController
+    resources "/locales", LocaleController
   end
 
   scope "/api", ContactWeb.Api, as: :api do
@@ -26,6 +27,7 @@ defmodule ContactWeb.Router do
 
     resources "/nodes", NodeController
     resources "/edges", EdgeController
+    resources "/locales", LocaleController
   end
 
 end

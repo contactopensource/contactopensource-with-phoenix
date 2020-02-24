@@ -1,0 +1,64 @@
+<h1>Listing Locales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenant</th>
+      <th>Type uri</th>
+      <th>Type text</th>
+      <th>State uri</th>
+      <th>State text</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by text</th>
+      <th>Text</th>
+      <th>Language code</th>
+      <th>Country code</th>
+      <th>Script code</th>
+      <th>Region code</th>
+      <th>Variant code</th>
+      <th>Decimal separator</th>
+      <th>Grouping separator</th>
+      <th>Currency code</th>
+      <th>Currency symbol</th>
+      <th>Quotation start delimiter</th>
+      <th>Quotation stop delimiter</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for locale <- @locales do %>
+    <tr>
+      <td><%= locale.tenant_id %></td>
+      <td><%= locale.type_uri %></td>
+      <td><%= locale.type_text %></td>
+      <td><%= locale.state_uri %></td>
+      <td><%= locale.state_text %></td>
+      <td><%= locale.updated_at_timestamp_utc %></td>
+      <td><%= locale.updated_at_clock_count %></td>
+      <td><%= locale.updated_by_text %></td>
+      <td><%= locale.text %></td>
+      <td><%= locale.language_code %></td>
+      <td><%= locale.country_code %></td>
+      <td><%= locale.script_code %></td>
+      <td><%= locale.region_code %></td>
+      <td><%= locale.variant_code %></td>
+      <td><%= locale.decimal_separator %></td>
+      <td><%= locale.grouping_separator %></td>
+      <td><%= locale.currency_code %></td>
+      <td><%= locale.currency_symbol %></td>
+      <td><%= locale.quotation_start_delimiter %></td>
+      <td><%= locale.quotation_stop_delimiter %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.locale_path(@conn, :show, locale) %></span>
+        <span><%= link "Edit", to: Routes.locale_path(@conn, :edit, locale) %></span>
+        <span><%= link "Delete", to: Routes.locale_path(@conn, :delete, locale), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Locale", to: Routes.locale_path(@conn, :new) %></span>

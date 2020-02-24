@@ -1,0 +1,108 @@
+<h1>Show Locale</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @locale.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @locale.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @locale.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @locale.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @locale.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @locale.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @locale.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @locale.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Text:</strong>
+    <%= @locale.text %>
+  </li>
+
+  <li>
+    <strong>Language code:</strong>
+    <%= @locale.language_code %>
+  </li>
+
+  <li>
+    <strong>Country code:</strong>
+    <%= @locale.country_code %>
+  </li>
+
+  <li>
+    <strong>Script code:</strong>
+    <%= @locale.script_code %>
+  </li>
+
+  <li>
+    <strong>Region code:</strong>
+    <%= @locale.region_code %>
+  </li>
+
+  <li>
+    <strong>Variant code:</strong>
+    <%= @locale.variant_code %>
+  </li>
+
+  <li>
+    <strong>Decimal separator:</strong>
+    <%= @locale.decimal_separator %>
+  </li>
+
+  <li>
+    <strong>Grouping separator:</strong>
+    <%= @locale.grouping_separator %>
+  </li>
+
+  <li>
+    <strong>Currency code:</strong>
+    <%= @locale.currency_code %>
+  </li>
+
+  <li>
+    <strong>Currency symbol:</strong>
+    <%= @locale.currency_symbol %>
+  </li>
+
+  <li>
+    <strong>Quotation start delimiter:</strong>
+    <%= @locale.quotation_start_delimiter %>
+  </li>
+
+  <li>
+    <strong>Quotation stop delimiter:</strong>
+    <%= @locale.quotation_stop_delimiter %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.locale_path(@conn, :edit, @locale) %></span>
+<span><%= link "Back", to: Routes.locale_path(@conn, :index) %></span>
