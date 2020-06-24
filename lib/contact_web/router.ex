@@ -20,6 +20,11 @@ defmodule ContactWeb.Router do
     resources "/nodes", NodeController
     resources "/edges", EdgeController
     resources "/locales", LocaleController
+    resources "/units", UnitController
+    resources "/persons", PersonController
+    resources "/places", PlaceController
+    resources "/things", ThingController
+    resources "/link_contacts", LinkContactController
   end
 
   scope "/api", ContactWeb.Api, as: :api do
@@ -28,6 +33,11 @@ defmodule ContactWeb.Router do
     resources "/nodes", NodeController
     resources "/edges", EdgeController
     resources "/locales", LocaleController
+    resources "/units", UnitController
+    resources "/persons", PersonController
+    resources "/places", PlaceController
+    resources "/things", ThingController
+    resources "/link_contacts", LinkContactController
   end
 
 end

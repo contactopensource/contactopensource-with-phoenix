@@ -1,0 +1,53 @@
+<h1>Show Unit</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @unit.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @unit.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @unit.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @unit.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @unit.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @unit.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @unit.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @unit.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @unit.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.unit_path(@conn, :edit, @unit) %></span>
+<span><%= link "Back", to: Routes.unit_path(@conn, :index) %></span>

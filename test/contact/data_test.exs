@@ -99,4 +99,79 @@ defmodule Contact.DataTest do
       assert %Ecto.Changeset{} = Data.change_locale(locale)
     end
   end
+
+  describe "units" do
+    alias Contact.Data.Unit
+
+    @valid_attrs %{name: "some name", state_text: "some state_text", state_uri: "some state_uri", tenant_id: "7488a646-e31f-11e4-aace-600308960662", type_text: "some type_text", type_uri: "some type_uri", updated_at_clock_count: 42, updated_at_timestamp_utc: ~N[2010-04-17 14:00:00], updated_by_text: "some updated_by_text"}
+    @update_attrs %{name: "some updated name", state_text: "some updated state_text", state_uri: "some updated state_uri", tenant_id: "7488a646-e31f-11e4-aace-600308960668", type_text: "some updated type_text", type_uri: "some updated type_uri", updated_at_clock_count: 43, updated_at_timestamp_utc: ~N[2011-05-18 15:01:01], updated_by_text: "some updated updated_by_text"}
+    @invalid_attrs %{name: nil, state_text: nil, state_uri: nil, tenant_id: nil, type_text: nil, type_uri: nil, updated_at_clock_count: nil, updated_at_timestamp_utc: nil, updated_by_text: nil}
+
+    def unit_fixture(attrs \\ %{}) do
+      {:ok, unit} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Data.create_unit()
+
+      unit
+    end
+
+    test "list_units/0 returns all units" do
+      unit = unit_fixture()
+      assert Data.list_units() == [unit]
+    end
+
+    test "get_unit!/1 returns the unit with given id" do
+      unit = unit_fixture()
+      assert Data.get_unit!(unit.id) == unit
+    end
+
+    test "create_unit/1 with valid data creates a unit" do
+      assert {:ok, %Unit{} = unit} = Data.create_unit(@valid_attrs)
+      assert unit.name == "some name"
+      assert unit.state_text == "some state_text"
+      assert unit.state_uri == "some state_uri"
+      assert unit.tenant_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert unit.type_text == "some type_text"
+      assert unit.type_uri == "some type_uri"
+      assert unit.updated_at_clock_count == 42
+      assert unit.updated_at_timestamp_utc == ~N[2010-04-17 14:00:00]
+      assert unit.updated_by_text == "some updated_by_text"
+    end
+
+    test "create_unit/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Data.create_unit(@invalid_attrs)
+    end
+
+    test "update_unit/2 with valid data updates the unit" do
+      unit = unit_fixture()
+      assert {:ok, %Unit{} = unit} = Data.update_unit(unit, @update_attrs)
+      assert unit.name == "some updated name"
+      assert unit.state_text == "some updated state_text"
+      assert unit.state_uri == "some updated state_uri"
+      assert unit.tenant_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert unit.type_text == "some updated type_text"
+      assert unit.type_uri == "some updated type_uri"
+      assert unit.updated_at_clock_count == 43
+      assert unit.updated_at_timestamp_utc == ~N[2011-05-18 15:01:01]
+      assert unit.updated_by_text == "some updated updated_by_text"
+    end
+
+    test "update_unit/2 with invalid data returns error changeset" do
+      unit = unit_fixture()
+      assert {:error, %Ecto.Changeset{}} = Data.update_unit(unit, @invalid_attrs)
+      assert unit == Data.get_unit!(unit.id)
+    end
+
+    test "delete_unit/1 deletes the unit" do
+      unit = unit_fixture()
+      assert {:ok, %Unit{}} = Data.delete_unit(unit)
+      assert_raise Ecto.NoResultsError, fn -> Data.get_unit!(unit.id) end
+    end
+
+    test "change_unit/1 returns a unit changeset" do
+      unit = unit_fixture()
+      assert %Ecto.Changeset{} = Data.change_unit(unit)
+    end
+  end
 end

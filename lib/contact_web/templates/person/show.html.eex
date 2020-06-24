@@ -1,0 +1,48 @@
+<h1>Show Person</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @person.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @person.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @person.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @person.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @person.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @person.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @person.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @person.updated_by_text %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.person_path(@conn, :edit, @person) %></span>
+<span><%= link "Back", to: Routes.person_path(@conn, :index) %></span>

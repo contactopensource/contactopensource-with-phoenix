@@ -1,0 +1,53 @@
+<h1>Show Place</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @place.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @place.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @place.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @place.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @place.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @place.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @place.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @place.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @place.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.place_path(@conn, :edit, @place) %></span>
+<span><%= link "Back", to: Routes.place_path(@conn, :index) %></span>

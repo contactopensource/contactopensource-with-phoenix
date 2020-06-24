@@ -1,0 +1,58 @@
+<h1>Show Link contact</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @link_contact.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @link_contact.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @link_contact.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @link_contact.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @link_contact.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @link_contact.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @link_contact.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @link_contact.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Label:</strong>
+    <%= @link_contact.label %>
+  </li>
+
+  <li>
+    <strong>Uri:</strong>
+    <%= @link_contact.uri %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.link_contact_path(@conn, :edit, @link_contact) %></span>
+<span><%= link "Back", to: Routes.link_contact_path(@conn, :index) %></span>

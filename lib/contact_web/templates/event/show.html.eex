@@ -1,0 +1,53 @@
+<h1>Show Event</h1>
+
+<ul>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @event.tenant_id %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @event.type_uri %>
+  </li>
+
+  <li>
+    <strong>Type text:</strong>
+    <%= @event.type_text %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @event.state_uri %>
+  </li>
+
+  <li>
+    <strong>State text:</strong>
+    <%= @event.state_text %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @event.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @event.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by text:</strong>
+    <%= @event.updated_by_text %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @event.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.event_path(@conn, :edit, @event) %></span>
+<span><%= link "Back", to: Routes.event_path(@conn, :index) %></span>

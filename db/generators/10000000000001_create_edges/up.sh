@@ -1,4 +1,7 @@
-mix phx.gen.html Graph Edge edges \
+#!/bin/sh
+
+mix phx.gen.html --binary-id \
+  Graph Edge edges \
   tenant_id:uuid \
   type_uri:text \
   type_text:text \
@@ -28,7 +31,8 @@ mix phx.gen.html Graph Edge edges \
   weight:decimal \
   probability:decimal
 
-mix phx.gen.json Graph Edge edges --web Api --no-context --no-schema \
+mix phx.gen.json --binary-id --web Api --no-context --no-schema \
+  Graph Edge edges \
   tenant_id:uuid \
   type_uri:text \
   type_text:text \

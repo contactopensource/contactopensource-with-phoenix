@@ -1,0 +1,42 @@
+<h1>Listing Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenant</th>
+      <th>Type uri</th>
+      <th>Type text</th>
+      <th>State uri</th>
+      <th>State text</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by text</th>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for place <- @places do %>
+    <tr>
+      <td><%= place.tenant_id %></td>
+      <td><%= place.type_uri %></td>
+      <td><%= place.type_text %></td>
+      <td><%= place.state_uri %></td>
+      <td><%= place.state_text %></td>
+      <td><%= place.updated_at_timestamp_utc %></td>
+      <td><%= place.updated_at_clock_count %></td>
+      <td><%= place.updated_by_text %></td>
+      <td><%= place.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.place_path(@conn, :show, place) %></span>
+        <span><%= link "Edit", to: Routes.place_path(@conn, :edit, place) %></span>
+        <span><%= link "Delete", to: Routes.place_path(@conn, :delete, place), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Place", to: Routes.place_path(@conn, :new) %></span>

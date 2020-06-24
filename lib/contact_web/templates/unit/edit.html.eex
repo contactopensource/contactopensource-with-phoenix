@@ -1,0 +1,5 @@
+<h1>Edit Unit</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.unit_path(@conn, :update, @unit)) %>
+
+<span><%= link "Back", to: Routes.unit_path(@conn, :index) %></span>
