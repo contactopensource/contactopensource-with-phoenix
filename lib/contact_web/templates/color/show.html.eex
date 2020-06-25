@@ -1,0 +1,98 @@
+<h1>Show Color</h1>
+
+<ul>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @color.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @color.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @color.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @color.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @color.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @color.state_uri %>
+  </li>
+
+  <li>
+    <strong>Rgb unit interval r:</strong>
+    <%= @color.rgb_unit_interval_r %>
+  </li>
+
+  <li>
+    <strong>Rgb unit interval g:</strong>
+    <%= @color.rgb_unit_interval_g %>
+  </li>
+
+  <li>
+    <strong>Rgb unit interval b:</strong>
+    <%= @color.rgb_unit_interval_b %>
+  </li>
+
+  <li>
+    <strong>Cymk unit interval c:</strong>
+    <%= @color.cymk_unit_interval_c %>
+  </li>
+
+  <li>
+    <strong>Cymk unit interval y:</strong>
+    <%= @color.cymk_unit_interval_y %>
+  </li>
+
+  <li>
+    <strong>Cymk unit interval m:</strong>
+    <%= @color.cymk_unit_interval_m %>
+  </li>
+
+  <li>
+    <strong>Cymk unit interval k:</strong>
+    <%= @color.cymk_unit_interval_k %>
+  </li>
+
+  <li>
+    <strong>Hex:</strong>
+    <%= @color.hex %>
+  </li>
+
+  <li>
+    <strong>Html color name:</strong>
+    <%= @color.html_color_name %>
+  </li>
+
+  <li>
+    <strong>X11 color name:</strong>
+    <%= @color.x11_color_name %>
+  </li>
+
+  <li>
+    <strong>Color naming system name:</strong>
+    <%= @color.color_naming_system_name %>
+  </li>
+
+  <li>
+    <strong>Pantone matching system name:</strong>
+    <%= @color.pantone_matching_system_name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.color_path(@conn, :edit, @color) %></span>
+<span><%= link "Back", to: Routes.color_path(@conn, :index) %></span>

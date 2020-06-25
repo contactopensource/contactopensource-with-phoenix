@@ -1,0 +1,5 @@
+<h1>Edit Color</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.color_path(@conn, :update, @color)) %>
+
+<span><%= link "Back", to: Routes.color_path(@conn, :index) %></span>
