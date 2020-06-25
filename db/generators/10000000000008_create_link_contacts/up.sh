@@ -9,7 +9,9 @@ mix phx.gen.html --binary-id \
     type_uri:text \
     state_uri:text \
     label:text \
-    uri:text
+    uri:text \
+    locale:uuid \
+    media_type:uuid
 
 mix phx.gen.json --binary-id --web Api --no-context --no-schema \
   Contactable LinkContact link_contacts \
@@ -20,4 +22,6 @@ mix phx.gen.json --binary-id --web Api --no-context --no-schema \
     type_uri:text \
     state_uri:text \
     label:text \
-    uri:text
+    uri:text \
+    locale:uuid \
+    media_type:uuid
