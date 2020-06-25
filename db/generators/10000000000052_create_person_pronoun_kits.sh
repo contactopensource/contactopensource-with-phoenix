@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mix phx.gen.html --binary-id \
-  Person PersonPronounKit person_pronoun_kits \
+  Main PersonPronounKit person_pronoun_kits \
     updated_at_timestamp_utc:naive_datetime \
     updated_at_clock_count:integer \
     updated_by_uri:text \
@@ -17,7 +17,7 @@ mix phx.gen.html --binary-id \
     disjunctive_pronoun:text
 
 mix phx.gen.json --binary-id --web Api --no-context --no-schema \
-  Person PersonPronounKit person_pronoun_kits \
+  Main PersonPronounKit person_pronoun_kits \
     updated_at_timestamp_utc:naive_datetime \
     updated_at_clock_count:integer \
     updated_by_uri:text \

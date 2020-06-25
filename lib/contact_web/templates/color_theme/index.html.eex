@@ -1,0 +1,64 @@
+<h1>Listing Color themes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Primary color</th>
+      <th>Secondary color</th>
+      <th>Tertiary color</th>
+      <th>Success color</th>
+      <th>Failure color</th>
+      <th>Light color</th>
+      <th>Dark color</th>
+      <th>Safety color</th>
+      <th>Caution color</th>
+      <th>Warning color</th>
+      <th>Danger color</th>
+      <th>Rag status r color</th>
+      <th>Rag status a color</th>
+      <th>Rag status g color</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for color_theme <- @color_themes do %>
+    <tr>
+      <td><%= color_theme.updated_at_timestamp_utc %></td>
+      <td><%= color_theme.updated_at_clock_count %></td>
+      <td><%= color_theme.updated_by_uri %></td>
+      <td><%= color_theme.tenant_uri %></td>
+      <td><%= color_theme.type_uri %></td>
+      <td><%= color_theme.state_uri %></td>
+      <td><%= color_theme.primary_color_id %></td>
+      <td><%= color_theme.secondary_color_id %></td>
+      <td><%= color_theme.tertiary_color_id %></td>
+      <td><%= color_theme.success_color_id %></td>
+      <td><%= color_theme.failure_color_id %></td>
+      <td><%= color_theme.light_color_id %></td>
+      <td><%= color_theme.dark_color_id %></td>
+      <td><%= color_theme.safety_color_id %></td>
+      <td><%= color_theme.caution_color_id %></td>
+      <td><%= color_theme.warning_color_id %></td>
+      <td><%= color_theme.danger_color_id %></td>
+      <td><%= color_theme.rag_status_r_color_id %></td>
+      <td><%= color_theme.rag_status_a_color_id %></td>
+      <td><%= color_theme.rag_status_g_color_id %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.color_theme_path(@conn, :show, color_theme) %></span>
+        <span><%= link "Edit", to: Routes.color_theme_path(@conn, :edit, color_theme) %></span>
+        <span><%= link "Delete", to: Routes.color_theme_path(@conn, :delete, color_theme), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Color theme", to: Routes.color_theme_path(@conn, :new) %></span>

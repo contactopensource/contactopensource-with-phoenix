@@ -1,0 +1,108 @@
+<h1>Show Color theme</h1>
+
+<ul>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @color_theme.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @color_theme.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @color_theme.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @color_theme.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @color_theme.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @color_theme.state_uri %>
+  </li>
+
+  <li>
+    <strong>Primary color:</strong>
+    <%= @color_theme.primary_color_id %>
+  </li>
+
+  <li>
+    <strong>Secondary color:</strong>
+    <%= @color_theme.secondary_color_id %>
+  </li>
+
+  <li>
+    <strong>Tertiary color:</strong>
+    <%= @color_theme.tertiary_color_id %>
+  </li>
+
+  <li>
+    <strong>Success color:</strong>
+    <%= @color_theme.success_color_id %>
+  </li>
+
+  <li>
+    <strong>Failure color:</strong>
+    <%= @color_theme.failure_color_id %>
+  </li>
+
+  <li>
+    <strong>Light color:</strong>
+    <%= @color_theme.light_color_id %>
+  </li>
+
+  <li>
+    <strong>Dark color:</strong>
+    <%= @color_theme.dark_color_id %>
+  </li>
+
+  <li>
+    <strong>Safety color:</strong>
+    <%= @color_theme.safety_color_id %>
+  </li>
+
+  <li>
+    <strong>Caution color:</strong>
+    <%= @color_theme.caution_color_id %>
+  </li>
+
+  <li>
+    <strong>Warning color:</strong>
+    <%= @color_theme.warning_color_id %>
+  </li>
+
+  <li>
+    <strong>Danger color:</strong>
+    <%= @color_theme.danger_color_id %>
+  </li>
+
+  <li>
+    <strong>Rag status r color:</strong>
+    <%= @color_theme.rag_status_r_color_id %>
+  </li>
+
+  <li>
+    <strong>Rag status a color:</strong>
+    <%= @color_theme.rag_status_a_color_id %>
+  </li>
+
+  <li>
+    <strong>Rag status g color:</strong>
+    <%= @color_theme.rag_status_g_color_id %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.color_theme_path(@conn, :edit, @color_theme) %></span>
+<span><%= link "Back", to: Routes.color_theme_path(@conn, :index) %></span>

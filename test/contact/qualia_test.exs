@@ -95,4 +95,101 @@ defmodule Contact.QualiaTest do
       assert %Ecto.Changeset{} = Qualia.change_color(color)
     end
   end
+
+  describe "color_themes" do
+    alias Contact.Qualia.ColorTheme
+
+    @valid_attrs %{caution_color_id: "7488a646-e31f-11e4-aace-600308960662", danger_color_id: "7488a646-e31f-11e4-aace-600308960662", dark_color_id: "7488a646-e31f-11e4-aace-600308960662", failure_color_id: "7488a646-e31f-11e4-aace-600308960662", light_color_id: "7488a646-e31f-11e4-aace-600308960662", primary_color_id: "7488a646-e31f-11e4-aace-600308960662", rag_status_a_color_id: "7488a646-e31f-11e4-aace-600308960662", rag_status_g_color_id: "7488a646-e31f-11e4-aace-600308960662", rag_status_r_color_id: "7488a646-e31f-11e4-aace-600308960662", safety_color_id: "7488a646-e31f-11e4-aace-600308960662", secondary_color_id: "7488a646-e31f-11e4-aace-600308960662", state_uri: "some state_uri", success_color_id: "7488a646-e31f-11e4-aace-600308960662", tenant_uri: "some tenant_uri", tertiary_color_id: "7488a646-e31f-11e4-aace-600308960662", type_uri: "some type_uri", updated_at_clock_count: 42, updated_at_timestamp_utc: ~N[2010-04-17 14:00:00], updated_by_uri: "some updated_by_uri", warning_color_id: "7488a646-e31f-11e4-aace-600308960662"}
+    @update_attrs %{caution_color_id: "7488a646-e31f-11e4-aace-600308960668", danger_color_id: "7488a646-e31f-11e4-aace-600308960668", dark_color_id: "7488a646-e31f-11e4-aace-600308960668", failure_color_id: "7488a646-e31f-11e4-aace-600308960668", light_color_id: "7488a646-e31f-11e4-aace-600308960668", primary_color_id: "7488a646-e31f-11e4-aace-600308960668", rag_status_a_color_id: "7488a646-e31f-11e4-aace-600308960668", rag_status_g_color_id: "7488a646-e31f-11e4-aace-600308960668", rag_status_r_color_id: "7488a646-e31f-11e4-aace-600308960668", safety_color_id: "7488a646-e31f-11e4-aace-600308960668", secondary_color_id: "7488a646-e31f-11e4-aace-600308960668", state_uri: "some updated state_uri", success_color_id: "7488a646-e31f-11e4-aace-600308960668", tenant_uri: "some updated tenant_uri", tertiary_color_id: "7488a646-e31f-11e4-aace-600308960668", type_uri: "some updated type_uri", updated_at_clock_count: 43, updated_at_timestamp_utc: ~N[2011-05-18 15:01:01], updated_by_uri: "some updated updated_by_uri", warning_color_id: "7488a646-e31f-11e4-aace-600308960668"}
+    @invalid_attrs %{caution_color_id: nil, danger_color_id: nil, dark_color_id: nil, failure_color_id: nil, light_color_id: nil, primary_color_id: nil, rag_status_a_color_id: nil, rag_status_g_color_id: nil, rag_status_r_color_id: nil, safety_color_id: nil, secondary_color_id: nil, state_uri: nil, success_color_id: nil, tenant_uri: nil, tertiary_color_id: nil, type_uri: nil, updated_at_clock_count: nil, updated_at_timestamp_utc: nil, updated_by_uri: nil, warning_color_id: nil}
+
+    def color_theme_fixture(attrs \\ %{}) do
+      {:ok, color_theme} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Qualia.create_color_theme()
+
+      color_theme
+    end
+
+    test "list_color_themes/0 returns all color_themes" do
+      color_theme = color_theme_fixture()
+      assert Qualia.list_color_themes() == [color_theme]
+    end
+
+    test "get_color_theme!/1 returns the color_theme with given id" do
+      color_theme = color_theme_fixture()
+      assert Qualia.get_color_theme!(color_theme.id) == color_theme
+    end
+
+    test "create_color_theme/1 with valid data creates a color_theme" do
+      assert {:ok, %ColorTheme{} = color_theme} = Qualia.create_color_theme(@valid_attrs)
+      assert color_theme.caution_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.danger_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.dark_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.failure_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.light_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.primary_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.rag_status_a_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.rag_status_g_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.rag_status_r_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.safety_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.secondary_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.state_uri == "some state_uri"
+      assert color_theme.success_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.tenant_uri == "some tenant_uri"
+      assert color_theme.tertiary_color_id == "7488a646-e31f-11e4-aace-600308960662"
+      assert color_theme.type_uri == "some type_uri"
+      assert color_theme.updated_at_clock_count == 42
+      assert color_theme.updated_at_timestamp_utc == ~N[2010-04-17 14:00:00]
+      assert color_theme.updated_by_uri == "some updated_by_uri"
+      assert color_theme.warning_color_id == "7488a646-e31f-11e4-aace-600308960662"
+    end
+
+    test "create_color_theme/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Qualia.create_color_theme(@invalid_attrs)
+    end
+
+    test "update_color_theme/2 with valid data updates the color_theme" do
+      color_theme = color_theme_fixture()
+      assert {:ok, %ColorTheme{} = color_theme} = Qualia.update_color_theme(color_theme, @update_attrs)
+      assert color_theme.caution_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.danger_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.dark_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.failure_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.light_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.primary_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.rag_status_a_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.rag_status_g_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.rag_status_r_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.safety_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.secondary_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.state_uri == "some updated state_uri"
+      assert color_theme.success_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.tenant_uri == "some updated tenant_uri"
+      assert color_theme.tertiary_color_id == "7488a646-e31f-11e4-aace-600308960668"
+      assert color_theme.type_uri == "some updated type_uri"
+      assert color_theme.updated_at_clock_count == 43
+      assert color_theme.updated_at_timestamp_utc == ~N[2011-05-18 15:01:01]
+      assert color_theme.updated_by_uri == "some updated updated_by_uri"
+      assert color_theme.warning_color_id == "7488a646-e31f-11e4-aace-600308960668"
+    end
+
+    test "update_color_theme/2 with invalid data returns error changeset" do
+      color_theme = color_theme_fixture()
+      assert {:error, %Ecto.Changeset{}} = Qualia.update_color_theme(color_theme, @invalid_attrs)
+      assert color_theme == Qualia.get_color_theme!(color_theme.id)
+    end
+
+    test "delete_color_theme/1 deletes the color_theme" do
+      color_theme = color_theme_fixture()
+      assert {:ok, %ColorTheme{}} = Qualia.delete_color_theme(color_theme)
+      assert_raise Ecto.NoResultsError, fn -> Qualia.get_color_theme!(color_theme.id) end
+    end
+
+    test "change_color_theme/1 returns a color_theme changeset" do
+      color_theme = color_theme_fixture()
+      assert %Ecto.Changeset{} = Qualia.change_color_theme(color_theme)
+    end
+  end
 end

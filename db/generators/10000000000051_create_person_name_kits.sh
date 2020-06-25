@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mix phx.gen.html --binary-id \
-  Person PersonNameKit person_name_kits \
+  Concept PersonNameKit person_name_kits \
     updated_at_timestamp_utc:naive_datetime \
     updated_at_clock_count:integer \
     updated_by_uri:text \
@@ -29,7 +29,7 @@ mix phx.gen.html --binary-id \
     nickname_phonetic:text
 
 mix phx.gen.json --binary-id --web Api --no-context --no-schema \
-  Person PersonNameKit person_name_kits \
+  Concept PersonNameKit person_name_kits \
     updated_at_timestamp_utc:naive_datetime \
     updated_at_clock_count:integer \
     updated_by_uri:text \

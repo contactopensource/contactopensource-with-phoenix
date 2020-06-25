@@ -34,7 +34,7 @@ update_db_generators() {
         "create_contacts" \
         "create_date_time_ranges" \
         "create_geo_points" \
-        "create_geo_circles" \
+        "create_geo_centers" \
         "create_geo_rectangles" \
         "create_person_name_kit" \
         "create_person_pronoun_kits"

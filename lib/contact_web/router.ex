@@ -26,6 +26,7 @@ defmodule ContactWeb.Router do
     resources "/things", ThingController
     resources "/link_contacts", LinkContactController
     resources "/colors", ColorController
+    resources "/color_themes", ColorThemeController
   end
 
   scope "/api", ContactWeb.Api, as: :api do
@@ -40,6 +41,7 @@ defmodule ContactWeb.Router do
     resources "/things", ThingController
     resources "/link_contacts", LinkContactController
     resources "/colors", ColorController
+    resources "/color_themes", ColorThemeController
   end
 
 end
