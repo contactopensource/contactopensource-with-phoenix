@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddUnaccent do
-  @moduledoc "Add unaccent so Postgres can search text more broadly"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionUnaccent do
+  @moduledoc "Create extension \"unaccent\" so Postgres can search text more broadly"
   use Ecto.Migration
 
   def change do

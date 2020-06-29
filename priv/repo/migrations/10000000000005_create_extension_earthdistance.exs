@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddEarthdistance do
-  @moduledoc "Add earthdistance module so Postgres can calculate with geography"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionEarthDistance do
+  @moduledoc "Create extension \"earthdistance\" so Postgres can calculate with geography"
   use Ecto.Migration
 
   def change do

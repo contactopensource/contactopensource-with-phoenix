@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddPgcrypto do
-  @moduledoc "Add PgCrypto so Postgres can generate its own binary UUIDs"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionPGCrypto do
+  @moduledoc "Create extension \"pgcrypto\" so Postgres can generate its own binary UUIDs"
   use Ecto.Migration
 
   def change do

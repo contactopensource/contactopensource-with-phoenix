@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddCube do
-  @moduledoc "Add cube data type so Postgres can represent dimensions"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionCube do
+  @moduledoc "Create extension \"cube\" so Postgres can use a data type to represent dimensions"
   use Ecto.Migration
 
   def change do

@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddLabelTree do
-  @moduledoc "Add label tree so Postgres can represent hierarchies"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionLTree do
+  @moduledoc "Create extension \"ltree\" so Postgres can represent label tree hierarchies"
   use Ecto.Migration
 
   def change do

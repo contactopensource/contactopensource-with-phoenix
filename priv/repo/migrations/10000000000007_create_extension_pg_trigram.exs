@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddTrigram do
-  @moduledoc "Add Trigram so Postgres can search similar text"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionPgTrigram do
+  @moduledoc "Create extension \"pg_trigram\" so Postgres can search similar text"
   use Ecto.Migration
 
   def change do
