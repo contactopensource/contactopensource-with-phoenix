@@ -8,7 +8,8 @@ mix phx.gen.html --binary-id \
     tenant_uri:text \
     type_uri:text \
     state_uri:text \
-    name:text
+    name:text \
+    symbol:text
 
 mix phx.gen.json --binary-id --web Api --no-context --no-schema \
   Data Unit units \
@@ -18,4 +19,5 @@ mix phx.gen.json --binary-id --web Api --no-context --no-schema \
     tenant_uri:text \
     type_uri:text \
     state_uri:text \
-    name:text
+    name:text \
+    symbol:text
