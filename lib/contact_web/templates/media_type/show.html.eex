@@ -1,0 +1,78 @@
+<h1>Show Media type</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @media_type.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @media_type.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @media_type.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @media_type.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @media_type.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @media_type.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @media_type.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @media_type.state_uri %>
+  </li>
+
+  <li>
+    <strong>Text:</strong>
+    <%= @media_type.text %>
+  </li>
+
+  <li>
+    <strong>Supertype:</strong>
+    <%= @media_type.supertype %>
+  </li>
+
+  <li>
+    <strong>Subtype:</strong>
+    <%= @media_type.subtype %>
+  </li>
+
+  <li>
+    <strong>Tree:</strong>
+    <%= @media_type.tree %>
+  </li>
+
+  <li>
+    <strong>Suffix:</strong>
+    <%= @media_type.suffix %>
+  </li>
+
+  <li>
+    <strong>Parameter text:</strong>
+    <%= @media_type.parameter_text %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.media_type_path(@conn, :edit, @media_type) %></span>
+<span><%= link "Back", to: Routes.media_type_path(@conn, :index) %></span>

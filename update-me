@@ -1,49 +1,13 @@
 #!/bin/sh
 
-list_migrations() {
-    find ../contactopensource_with_sql/db/migrations -depth 1 -type d -exec basename {} \;
-}
-
-list_generators() {
-    find db/generators -depth 1 -type d -exec basename {} \;
-}
-
 update_db_setups() {
-    rsync -av --delete ../contactopensource_with_sql/db/setups/ db/setups/
+    rsync -av --delete ../contactopensource_with_postgresql/db/setups/ db/setups/
 }
 
 update_db_generators() {
-    dir="db/generators"
-    i=10000000000000
-    for name in \
-        "create_nodes" \
-        "create_edges" \
-        "create_locales" \
-        "create_units" \
-        "create_tags" \
-        "create_media_types" \
-        "create_persons" \
-        "create_places" \
-        "create_things" \
-        "create_events" \
-        "create_link_contacts" \
-        "create_email_contacts" \
-        "create_phone_contacts" \
-        "create_postal_contacts" \
-        "create_passport_contacts" \
-        "create_contacts" \
-        "create_date_time_ranges" \
-        "create_geo_points" \
-        "create_geo_centers" \
-        "create_geo_rectangles" \
-        "create_person_name_kit" \
-        "create_person_pronoun_kits"
-    do
-        file_name="${i}_${name}"
-        test -e "$dir/$file_name" || git mv $dir/*_$migration_name $dir/$file_name
-        test -e "$dir/$file_name" || "Missing path:$dir/$file_name"
-        i=$(( $i + 1 ))
-    done
+    pushd db/generators
+    ./renumber
+    popd
 }
 
 update_db_setups

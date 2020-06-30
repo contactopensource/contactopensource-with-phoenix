@@ -1,0 +1,68 @@
+<h1>Show Book</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @book.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @book.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @book.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @book.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @book.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @book.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @book.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @book.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @book.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @book.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @book.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.book_path(@conn, :edit, @book) %></span>
+<span><%= link "Back", to: Routes.book_path(@conn, :index) %></span>

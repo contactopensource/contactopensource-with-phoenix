@@ -1,0 +1,44 @@
+<h1>Listing Link contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenant</th>
+      <th>Type uri</th>
+      <th>Type text</th>
+      <th>State uri</th>
+      <th>State text</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by text</th>
+      <th>Label</th>
+      <th>Uri</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for uri_contact <- @uri_contacts do %>
+    <tr>
+      <td><%= uri_contact.tenant_id %></td>
+      <td><%= uri_contact.type_uri %></td>
+      <td><%= uri_contact.type_text %></td>
+      <td><%= uri_contact.state_uri %></td>
+      <td><%= uri_contact.state_text %></td>
+      <td><%= uri_contact.updated_at_timestamp_utc %></td>
+      <td><%= uri_contact.updated_at_clock_count %></td>
+      <td><%= uri_contact.updated_by_text %></td>
+      <td><%= uri_contact.label %></td>
+      <td><%= uri_contact.uri %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.uri_contact_path(@conn, :show, uri_contact) %></span>
+        <span><%= link "Edit", to: Routes.uri_contact_path(@conn, :edit, uri_contact) %></span>
+        <span><%= link "Delete", to: Routes.uri_contact_path(@conn, :delete, uri_contact), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Link contact", to: Routes.uri_contact_path(@conn, :new) %></span>

@@ -1,0 +1,68 @@
+<h1>Show Organization</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @organization.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @organization.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @organization.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @organization.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @organization.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @organization.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @organization.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @organization.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @organization.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @organization.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @organization.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @organization.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.organization_path(@conn, :edit, @organization) %></span>
+<span><%= link "Back", to: Routes.organization_path(@conn, :index) %></span>

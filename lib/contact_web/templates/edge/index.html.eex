@@ -30,7 +30,7 @@
       <th>Stop at timestamp utc</th>
       <th>Count</th>
       <th>Weight</th>
-      <th>Probability</th>
+      <th>UnitInterval</th>
 
       <th></th>
     </tr>
@@ -65,7 +65,8 @@
       <td><%= edge.stop_at_timestamp_utc %></td>
       <td><%= edge.count %></td>
       <td><%= edge.weight %></td>
-      <td><%= edge.probability %></td>
+      <td><%= edge.unit_interval %></td>
+      <td><%= edge.dual_interval %></td>
 
       <td>
         <span><%= link "Show", to: Routes.edge_path(@conn, :show, edge) %></span>

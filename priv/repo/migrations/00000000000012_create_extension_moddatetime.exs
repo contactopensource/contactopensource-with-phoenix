@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddModDateTime do
-  @moduledoc "Add moddatetime so Postgres can do modification timestamps"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionModDateTime do
+  @moduledoc "Create extension \"moddatetime\" so Postgres can do modification timestamps"
   use Ecto.Migration
 
   def change do

@@ -1,0 +1,58 @@
+<h1>Listing Postal contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Freeform</th>
+      <th>Country text</th>
+      <th>Region text</th>
+      <th>Locality text</th>
+      <th>Neighborhood text</th>
+      <th>Postal code text</th>
+      <th>Street address text</th>
+      <th>Premise address text</th>
+      <th>Global location number text</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for postal_contact <- @postal_contacts do %>
+    <tr>
+      <td><%= postal_contact.created_at_timestamp_utc %></td>
+      <td><%= postal_contact.created_at_clock_count %></td>
+      <td><%= postal_contact.updated_at_timestamp_utc %></td>
+      <td><%= postal_contact.updated_at_clock_count %></td>
+      <td><%= postal_contact.updated_by_uri %></td>
+      <td><%= postal_contact.tenant_uri %></td>
+      <td><%= postal_contact.type_uri %></td>
+      <td><%= postal_contact.state_uri %></td>
+      <td><%= postal_contact.freeform %></td>
+      <td><%= postal_contact.country_text %></td>
+      <td><%= postal_contact.region_text %></td>
+      <td><%= postal_contact.locality_text %></td>
+      <td><%= postal_contact.neighborhood_text %></td>
+      <td><%= postal_contact.postal_code_text %></td>
+      <td><%= postal_contact.street_address_text %></td>
+      <td><%= postal_contact.premise_address_text %></td>
+      <td><%= postal_contact.global_location_number_text %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.postal_contact_path(@conn, :show, postal_contact) %></span>
+        <span><%= link "Edit", to: Routes.postal_contact_path(@conn, :edit, postal_contact) %></span>
+        <span><%= link "Delete", to: Routes.postal_contact_path(@conn, :delete, postal_contact), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Postal contact", to: Routes.postal_contact_path(@conn, :new) %></span>

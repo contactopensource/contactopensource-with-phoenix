@@ -1,0 +1,48 @@
+<h1>Listing Artists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for artist <- @artists do %>
+    <tr>
+      <td><%= artist.created_at_timestamp_utc %></td>
+      <td><%= artist.created_at_clock_count %></td>
+      <td><%= artist.updated_at_timestamp_utc %></td>
+      <td><%= artist.updated_at_clock_count %></td>
+      <td><%= artist.updated_by_uri %></td>
+      <td><%= artist.tenant_uri %></td>
+      <td><%= artist.type_uri %></td>
+      <td><%= artist.state_uri %></td>
+      <td><%= artist.title %></td>
+      <td><%= artist.subtitle %></td>
+      <td><%= artist.summary %></td>
+      <td><%= artist.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.artist_path(@conn, :show, artist) %></span>
+        <span><%= link "Edit", to: Routes.artist_path(@conn, :edit, artist) %></span>
+        <span><%= link "Delete", to: Routes.artist_path(@conn, :delete, artist), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Artist", to: Routes.artist_path(@conn, :new) %></span>

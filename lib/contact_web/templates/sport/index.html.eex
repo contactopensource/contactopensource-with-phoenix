@@ -1,0 +1,48 @@
+<h1>Listing Sports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for sport <- @sports do %>
+    <tr>
+      <td><%= sport.created_at_timestamp_utc %></td>
+      <td><%= sport.created_at_clock_count %></td>
+      <td><%= sport.updated_at_timestamp_utc %></td>
+      <td><%= sport.updated_at_clock_count %></td>
+      <td><%= sport.updated_by_uri %></td>
+      <td><%= sport.tenant_uri %></td>
+      <td><%= sport.type_uri %></td>
+      <td><%= sport.state_uri %></td>
+      <td><%= sport.title %></td>
+      <td><%= sport.subtitle %></td>
+      <td><%= sport.summary %></td>
+      <td><%= sport.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.sport_path(@conn, :show, sport) %></span>
+        <span><%= link "Edit", to: Routes.sport_path(@conn, :edit, sport) %></span>
+        <span><%= link "Delete", to: Routes.sport_path(@conn, :delete, sport), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Sport", to: Routes.sport_path(@conn, :new) %></span>

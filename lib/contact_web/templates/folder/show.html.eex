@@ -1,0 +1,83 @@
+<h1>Show Folder</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @folder.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @folder.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @folder.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @folder.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @folder.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @folder.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @folder.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @folder.state_uri %>
+  </li>
+
+  <li>
+    <strong>Locale:</strong>
+    <%= @folder.locale_id %>
+  </li>
+
+  <li>
+    <strong>Media type:</strong>
+    <%= @folder.media_type_id %>
+  </li>
+
+  <li>
+    <strong>Codec:</strong>
+    <%= @folder.codec_id %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @folder.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @folder.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @folder.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @folder.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.folder_path(@conn, :edit, @folder) %></span>
+<span><%= link "Back", to: Routes.folder_path(@conn, :index) %></span>

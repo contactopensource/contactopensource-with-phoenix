@@ -1,0 +1,68 @@
+<h1>Show Movie</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @movie.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @movie.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @movie.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @movie.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @movie.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @movie.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @movie.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @movie.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @movie.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @movie.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @movie.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @movie.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.movie_path(@conn, :edit, @movie) %></span>
+<span><%= link "Back", to: Routes.movie_path(@conn, :index) %></span>

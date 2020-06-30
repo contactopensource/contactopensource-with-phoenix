@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :contact, Contact.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "contact_leader",
+  password: "secret",
   database: "contact_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

@@ -1,0 +1,58 @@
+<h1>Show Geo center</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @geo_center.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @geo_center.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @geo_center.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @geo_center.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @geo_center.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @geo_center.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @geo_center.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @geo_center.state_uri %>
+  </li>
+
+  <li>
+    <strong>Center as geo point:</strong>
+    <%= @geo_center.center_as_geo_point_id %>
+  </li>
+
+  <li>
+    <strong>Spread as meters:</strong>
+    <%= @geo_center.spread_as_meters %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.geo_center_path(@conn, :edit, @geo_center) %></span>
+<span><%= link "Back", to: Routes.geo_center_path(@conn, :index) %></span>

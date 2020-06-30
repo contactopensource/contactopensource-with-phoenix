@@ -1,0 +1,143 @@
+<h1>Show Person name kit</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @person_name_kit.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @person_name_kit.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @person_name_kit.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @person_name_kit.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @person_name_kit.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @person_name_kit.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @person_name_kit.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @person_name_kit.state_uri %>
+  </li>
+
+  <li>
+    <strong>Locale:</strong>
+    <%= @person_name_kit.locale_id %>
+  </li>
+
+  <li>
+    <strong>Given name:</strong>
+    <%= @person_name_kit.given_name %>
+  </li>
+
+  <li>
+    <strong>Given name phonetic:</strong>
+    <%= @person_name_kit.given_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Middle name:</strong>
+    <%= @person_name_kit.middle_name %>
+  </li>
+
+  <li>
+    <strong>Middle name phonetic:</strong>
+    <%= @person_name_kit.middle_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Family name:</strong>
+    <%= @person_name_kit.family_name %>
+  </li>
+
+  <li>
+    <strong>Family name phonetic:</strong>
+    <%= @person_name_kit.family_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Legal name:</strong>
+    <%= @person_name_kit.legal_name %>
+  </li>
+
+  <li>
+    <strong>Legal name phonetic:</strong>
+    <%= @person_name_kit.legal_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Prefix name:</strong>
+    <%= @person_name_kit.prefix_name %>
+  </li>
+
+  <li>
+    <strong>Prefix name phonetic:</strong>
+    <%= @person_name_kit.prefix_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Suffix name:</strong>
+    <%= @person_name_kit.suffix_name %>
+  </li>
+
+  <li>
+    <strong>Suffix name phonetic:</strong>
+    <%= @person_name_kit.suffix_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Salutation name:</strong>
+    <%= @person_name_kit.salutation_name %>
+  </li>
+
+  <li>
+    <strong>Salutation name phonetic:</strong>
+    <%= @person_name_kit.salutation_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Addressee name:</strong>
+    <%= @person_name_kit.addressee_name %>
+  </li>
+
+  <li>
+    <strong>Addressee name phonetic:</strong>
+    <%= @person_name_kit.addressee_name_phonetic %>
+  </li>
+
+  <li>
+    <strong>Nickname:</strong>
+    <%= @person_name_kit.nickname %>
+  </li>
+
+  <li>
+    <strong>Nickname phonetic:</strong>
+    <%= @person_name_kit.nickname_phonetic %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.person_name_kit_path(@conn, :edit, @person_name_kit) %></span>
+<span><%= link "Back", to: Routes.person_name_kit_path(@conn, :index) %></span>

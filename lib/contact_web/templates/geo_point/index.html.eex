@@ -1,0 +1,52 @@
+<h1>Listing Geo points</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Latitude as decimal degrees</th>
+      <th>Longitude as decimal degrees</th>
+      <th>Altitude agl as meters</th>
+      <th>Altitude msl as meters</th>
+      <th>Elevation agl as meters</th>
+      <th>Elevation msl as meters</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for geo_point <- @geo_points do %>
+    <tr>
+      <td><%= geo_point.created_at_timestamp_utc %></td>
+      <td><%= geo_point.created_at_clock_count %></td>
+      <td><%= geo_point.updated_at_timestamp_utc %></td>
+      <td><%= geo_point.updated_at_clock_count %></td>
+      <td><%= geo_point.updated_by_uri %></td>
+      <td><%= geo_point.tenant_uri %></td>
+      <td><%= geo_point.type_uri %></td>
+      <td><%= geo_point.state_uri %></td>
+      <td><%= geo_point.latitude_as_decimal_degrees %></td>
+      <td><%= geo_point.longitude_as_decimal_degrees %></td>
+      <td><%= geo_point.altitude_agl_as_meters %></td>
+      <td><%= geo_point.altitude_msl_as_meters %></td>
+      <td><%= geo_point.elevation_agl_as_meters %></td>
+      <td><%= geo_point.elevation_msl_as_meters %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.geo_point_path(@conn, :show, geo_point) %></span>
+        <span><%= link "Edit", to: Routes.geo_point_path(@conn, :edit, geo_point) %></span>
+        <span><%= link "Delete", to: Routes.geo_point_path(@conn, :delete, geo_point), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Geo point", to: Routes.geo_point_path(@conn, :new) %></span>

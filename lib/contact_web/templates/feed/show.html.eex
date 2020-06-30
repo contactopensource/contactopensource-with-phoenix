@@ -1,0 +1,83 @@
+<h1>Show Feed</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @feed.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @feed.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @feed.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @feed.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @feed.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @feed.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @feed.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @feed.state_uri %>
+  </li>
+
+  <li>
+    <strong>Locale:</strong>
+    <%= @feed.locale_id %>
+  </li>
+
+  <li>
+    <strong>Media type:</strong>
+    <%= @feed.media_type_id %>
+  </li>
+
+  <li>
+    <strong>Codec:</strong>
+    <%= @feed.codec_id %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @feed.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @feed.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @feed.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @feed.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.feed_path(@conn, :edit, @feed) %></span>
+<span><%= link "Back", to: Routes.feed_path(@conn, :index) %></span>

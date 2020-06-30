@@ -1,0 +1,5 @@
+<h1>Edit Geo center</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.geo_center_path(@conn, :update, @geo_center)) %>
+
+<span><%= link "Back", to: Routes.geo_center_path(@conn, :index) %></span>

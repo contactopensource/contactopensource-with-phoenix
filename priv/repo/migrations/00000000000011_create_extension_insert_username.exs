@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddInsertUsername do
-  @moduledoc "Add insert_username so Postgres can track who modifies"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionInsertUsername do
+  @moduledoc "Create extension \"insert_username\" so Postgres can track who modifies what"
   use Ecto.Migration
 
   def change do

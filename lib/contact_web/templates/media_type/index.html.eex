@@ -1,0 +1,52 @@
+<h1>Listing Media types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Text</th>
+      <th>Supertype</th>
+      <th>Subtype</th>
+      <th>Tree</th>
+      <th>Suffix</th>
+      <th>Parameter text</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for media_type <- @media_types do %>
+    <tr>
+      <td><%= media_type.created_at_timestamp_utc %></td>
+      <td><%= media_type.created_at_clock_count %></td>
+      <td><%= media_type.updated_at_timestamp_utc %></td>
+      <td><%= media_type.updated_at_clock_count %></td>
+      <td><%= media_type.updated_by_uri %></td>
+      <td><%= media_type.tenant_uri %></td>
+      <td><%= media_type.type_uri %></td>
+      <td><%= media_type.state_uri %></td>
+      <td><%= media_type.text %></td>
+      <td><%= media_type.supertype %></td>
+      <td><%= media_type.subtype %></td>
+      <td><%= media_type.tree %></td>
+      <td><%= media_type.suffix %></td>
+      <td><%= media_type.parameter_text %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.media_type_path(@conn, :show, media_type) %></span>
+        <span><%= link "Edit", to: Routes.media_type_path(@conn, :edit, media_type) %></span>
+        <span><%= link "Delete", to: Routes.media_type_path(@conn, :delete, media_type), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Media type", to: Routes.media_type_path(@conn, :new) %></span>

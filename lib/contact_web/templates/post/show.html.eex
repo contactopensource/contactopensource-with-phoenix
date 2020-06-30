@@ -1,0 +1,83 @@
+<h1>Show Post</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @post.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @post.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @post.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @post.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @post.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @post.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @post.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @post.state_uri %>
+  </li>
+
+  <li>
+    <strong>Locale:</strong>
+    <%= @post.locale_id %>
+  </li>
+
+  <li>
+    <strong>Media type:</strong>
+    <%= @post.media_type_id %>
+  </li>
+
+  <li>
+    <strong>Codec:</strong>
+    <%= @post.codec_id %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @post.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @post.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @post.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.post_path(@conn, :edit, @post) %></span>
+<span><%= link "Back", to: Routes.post_path(@conn, :index) %></span>

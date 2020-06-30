@@ -1,0 +1,54 @@
+<h1>Listing Person pronoun kits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Subject pronoun</th>
+      <th>Object pronoun</th>
+      <th>Dependent possessive pronoun</th>
+      <th>Independent possessive pronoun</th>
+      <th>Reflexive pronoun</th>
+      <th>Intensive pronoun</th>
+      <th>Disjunctive pronoun</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for person_pronoun_kit <- @person_pronoun_kits do %>
+    <tr>
+      <td><%= person_pronoun_kit.created_at_timestamp_utc %></td>
+      <td><%= person_pronoun_kit.created_at_clock_count %></td>
+      <td><%= person_pronoun_kit.updated_at_timestamp_utc %></td>
+      <td><%= person_pronoun_kit.updated_at_clock_count %></td>
+      <td><%= person_pronoun_kit.updated_by_uri %></td>
+      <td><%= person_pronoun_kit.tenant_uri %></td>
+      <td><%= person_pronoun_kit.type_uri %></td>
+      <td><%= person_pronoun_kit.state_uri %></td>
+      <td><%= person_pronoun_kit.subject_pronoun %></td>
+      <td><%= person_pronoun_kit.object_pronoun %></td>
+      <td><%= person_pronoun_kit.dependent_possessive_pronoun %></td>
+      <td><%= person_pronoun_kit.independent_possessive_pronoun %></td>
+      <td><%= person_pronoun_kit.reflexive_pronoun %></td>
+      <td><%= person_pronoun_kit.intensive_pronoun %></td>
+      <td><%= person_pronoun_kit.disjunctive_pronoun %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.person_pronoun_kit_path(@conn, :show, person_pronoun_kit) %></span>
+        <span><%= link "Edit", to: Routes.person_pronoun_kit_path(@conn, :edit, person_pronoun_kit) %></span>
+        <span><%= link "Delete", to: Routes.person_pronoun_kit_path(@conn, :delete, person_pronoun_kit), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Person pronoun kit", to: Routes.person_pronoun_kit_path(@conn, :new) %></span>

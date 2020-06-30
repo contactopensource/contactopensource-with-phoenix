@@ -1,0 +1,56 @@
+<h1>Listing Phone contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Label</th>
+      <th>Number text</th>
+      <th>E164 text</th>
+      <th>E164 country code</th>
+      <th>E164 national destination code</th>
+      <th>E164 group identification code</th>
+      <th>E164 trial identification code</th>
+      <th>E164 subscriber number</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for phone_contact <- @phone_contacts do %>
+    <tr>
+      <td><%= phone_contact.created_at_timestamp_utc %></td>
+      <td><%= phone_contact.created_at_clock_count %></td>
+      <td><%= phone_contact.updated_at_timestamp_utc %></td>
+      <td><%= phone_contact.updated_at_clock_count %></td>
+      <td><%= phone_contact.updated_by_uri %></td>
+      <td><%= phone_contact.tenant_uri %></td>
+      <td><%= phone_contact.type_uri %></td>
+      <td><%= phone_contact.state_uri %></td>
+      <td><%= phone_contact.label %></td>
+      <td><%= phone_contact.number_text %></td>
+      <td><%= phone_contact.e164_text %></td>
+      <td><%= phone_contact.e164_country_code %></td>
+      <td><%= phone_contact.e164_national_destination_code %></td>
+      <td><%= phone_contact.e164_group_identification_code %></td>
+      <td><%= phone_contact.e164_trial_identification_code %></td>
+      <td><%= phone_contact.e164_subscriber_number %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.phone_contact_path(@conn, :show, phone_contact) %></span>
+        <span><%= link "Edit", to: Routes.phone_contact_path(@conn, :edit, phone_contact) %></span>
+        <span><%= link "Delete", to: Routes.phone_contact_path(@conn, :delete, phone_contact), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Phone contact", to: Routes.phone_contact_path(@conn, :new) %></span>

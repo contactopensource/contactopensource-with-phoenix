@@ -1,0 +1,67 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :created_at_timestamp_utc %>
+  <%= datetime_select f, :created_at_timestamp_utc %>
+  <%= error_tag f, :created_at_timestamp_utc %>
+
+  <%= label f, :created_at_clock_count %>
+  <%= number_input f, :created_at_clock_count %>
+  <%= error_tag f, :created_at_clock_count %>
+
+  <%= label f, :updated_at_timestamp_utc %>
+  <%= datetime_select f, :updated_at_timestamp_utc %>
+  <%= error_tag f, :updated_at_timestamp_utc %>
+
+  <%= label f, :updated_at_clock_count %>
+  <%= number_input f, :updated_at_clock_count %>
+  <%= error_tag f, :updated_at_clock_count %>
+
+  <%= label f, :updated_by_uri %>
+  <%= textarea f, :updated_by_uri %>
+  <%= error_tag f, :updated_by_uri %>
+
+  <%= label f, :tenant_uri %>
+  <%= textarea f, :tenant_uri %>
+  <%= error_tag f, :tenant_uri %>
+
+  <%= label f, :type_uri %>
+  <%= textarea f, :type_uri %>
+  <%= error_tag f, :type_uri %>
+
+  <%= label f, :state_uri %>
+  <%= textarea f, :state_uri %>
+  <%= error_tag f, :state_uri %>
+
+  <%= label f, :latitude_as_decimal_degrees %>
+  <%= number_input f, :latitude_as_decimal_degrees, step: "any" %>
+  <%= error_tag f, :latitude_as_decimal_degrees %>
+
+  <%= label f, :longitude_as_decimal_degrees %>
+  <%= number_input f, :longitude_as_decimal_degrees, step: "any" %>
+  <%= error_tag f, :longitude_as_decimal_degrees %>
+
+  <%= label f, :altitude_agl_as_meters %>
+  <%= number_input f, :altitude_agl_as_meters, step: "any" %>
+  <%= error_tag f, :altitude_agl_as_meters %>
+
+  <%= label f, :altitude_msl_as_meters %>
+  <%= number_input f, :altitude_msl_as_meters, step: "any" %>
+  <%= error_tag f, :altitude_msl_as_meters %>
+
+  <%= label f, :elevation_agl_as_meters %>
+  <%= number_input f, :elevation_agl_as_meters, step: "any" %>
+  <%= error_tag f, :elevation_agl_as_meters %>
+
+  <%= label f, :elevation_msl_as_meters %>
+  <%= number_input f, :elevation_msl_as_meters, step: "any" %>
+  <%= error_tag f, :elevation_msl_as_meters %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

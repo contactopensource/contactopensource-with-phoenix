@@ -1,0 +1,5 @@
+<h1>Edit Postal contact</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.postal_contact_path(@conn, :update, @postal_contact)) %>
+
+<span><%= link "Back", to: Routes.postal_contact_path(@conn, :index) %></span>

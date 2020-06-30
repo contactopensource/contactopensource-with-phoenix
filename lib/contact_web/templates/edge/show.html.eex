@@ -138,8 +138,13 @@
   </li>
 
   <li>
-    <strong>Probability:</strong>
-    <%= @edge.probability %>
+    <strong>Unit interval:</strong>
+    <%= @edge.unit_interval %>
+  </li>
+
+  <li>
+    <strong>Dual interval:</strong>
+    <%= @edge.dual_interval %>
   </li>
 
 </ul>

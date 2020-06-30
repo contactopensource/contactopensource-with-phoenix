@@ -1,0 +1,48 @@
+<h1>Listing Offers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for offer <- @offers do %>
+    <tr>
+      <td><%= offer.created_at_timestamp_utc %></td>
+      <td><%= offer.created_at_clock_count %></td>
+      <td><%= offer.updated_at_timestamp_utc %></td>
+      <td><%= offer.updated_at_clock_count %></td>
+      <td><%= offer.updated_by_uri %></td>
+      <td><%= offer.tenant_uri %></td>
+      <td><%= offer.type_uri %></td>
+      <td><%= offer.state_uri %></td>
+      <td><%= offer.title %></td>
+      <td><%= offer.subtitle %></td>
+      <td><%= offer.summary %></td>
+      <td><%= offer.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.offer_path(@conn, :show, offer) %></span>
+        <span><%= link "Edit", to: Routes.offer_path(@conn, :edit, offer) %></span>
+        <span><%= link "Delete", to: Routes.offer_path(@conn, :delete, offer), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Offer", to: Routes.offer_path(@conn, :new) %></span>

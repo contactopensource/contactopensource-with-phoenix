@@ -1,0 +1,78 @@
+<h1>Listing Person name kits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Locale</th>
+      <th>Given name</th>
+      <th>Given name phonetic</th>
+      <th>Middle name</th>
+      <th>Middle name phonetic</th>
+      <th>Family name</th>
+      <th>Family name phonetic</th>
+      <th>Legal name</th>
+      <th>Legal name phonetic</th>
+      <th>Prefix name</th>
+      <th>Prefix name phonetic</th>
+      <th>Suffix name</th>
+      <th>Suffix name phonetic</th>
+      <th>Salutation name</th>
+      <th>Salutation name phonetic</th>
+      <th>Addressee name</th>
+      <th>Addressee name phonetic</th>
+      <th>Nickname</th>
+      <th>Nickname phonetic</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for person_name_kit <- @person_name_kits do %>
+    <tr>
+      <td><%= person_name_kit.created_at_timestamp_utc %></td>
+      <td><%= person_name_kit.created_at_clock_count %></td>
+      <td><%= person_name_kit.updated_at_timestamp_utc %></td>
+      <td><%= person_name_kit.updated_at_clock_count %></td>
+      <td><%= person_name_kit.updated_by_uri %></td>
+      <td><%= person_name_kit.tenant_uri %></td>
+      <td><%= person_name_kit.type_uri %></td>
+      <td><%= person_name_kit.state_uri %></td>
+      <td><%= person_name_kit.locale_id %></td>
+      <td><%= person_name_kit.given_name %></td>
+      <td><%= person_name_kit.given_name_phonetic %></td>
+      <td><%= person_name_kit.middle_name %></td>
+      <td><%= person_name_kit.middle_name_phonetic %></td>
+      <td><%= person_name_kit.family_name %></td>
+      <td><%= person_name_kit.family_name_phonetic %></td>
+      <td><%= person_name_kit.legal_name %></td>
+      <td><%= person_name_kit.legal_name_phonetic %></td>
+      <td><%= person_name_kit.prefix_name %></td>
+      <td><%= person_name_kit.prefix_name_phonetic %></td>
+      <td><%= person_name_kit.suffix_name %></td>
+      <td><%= person_name_kit.suffix_name_phonetic %></td>
+      <td><%= person_name_kit.salutation_name %></td>
+      <td><%= person_name_kit.salutation_name_phonetic %></td>
+      <td><%= person_name_kit.addressee_name %></td>
+      <td><%= person_name_kit.addressee_name_phonetic %></td>
+      <td><%= person_name_kit.nickname %></td>
+      <td><%= person_name_kit.nickname_phonetic %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.person_name_kit_path(@conn, :show, person_name_kit) %></span>
+        <span><%= link "Edit", to: Routes.person_name_kit_path(@conn, :edit, person_name_kit) %></span>
+        <span><%= link "Delete", to: Routes.person_name_kit_path(@conn, :delete, person_name_kit), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Person name kit", to: Routes.person_name_kit_path(@conn, :new) %></span>

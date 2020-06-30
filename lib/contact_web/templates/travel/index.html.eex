@@ -1,0 +1,48 @@
+<h1>Listing Travels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for travel <- @travels do %>
+    <tr>
+      <td><%= travel.created_at_timestamp_utc %></td>
+      <td><%= travel.created_at_clock_count %></td>
+      <td><%= travel.updated_at_timestamp_utc %></td>
+      <td><%= travel.updated_at_clock_count %></td>
+      <td><%= travel.updated_by_uri %></td>
+      <td><%= travel.tenant_uri %></td>
+      <td><%= travel.type_uri %></td>
+      <td><%= travel.state_uri %></td>
+      <td><%= travel.title %></td>
+      <td><%= travel.subtitle %></td>
+      <td><%= travel.summary %></td>
+      <td><%= travel.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.travel_path(@conn, :show, travel) %></span>
+        <span><%= link "Edit", to: Routes.travel_path(@conn, :edit, travel) %></span>
+        <span><%= link "Delete", to: Routes.travel_path(@conn, :delete, travel), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Travel", to: Routes.travel_path(@conn, :new) %></span>

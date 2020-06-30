@@ -1,0 +1,1 @@
+cat ~/git/contactopensource/contactopensource/doc/concepts.txt | sed 's/^/_/; s/$/s.sh/;' | git-mv-renumber-timestamp-path-names

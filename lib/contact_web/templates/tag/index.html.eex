@@ -1,0 +1,54 @@
+<h1>Listing Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Locale</th>
+      <th>Media type</th>
+      <th>Codec</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for tag <- @tags do %>
+    <tr>
+      <td><%= tag.created_at_timestamp_utc %></td>
+      <td><%= tag.created_at_clock_count %></td>
+      <td><%= tag.updated_at_timestamp_utc %></td>
+      <td><%= tag.updated_at_clock_count %></td>
+      <td><%= tag.updated_by_uri %></td>
+      <td><%= tag.tenant_uri %></td>
+      <td><%= tag.type_uri %></td>
+      <td><%= tag.state_uri %></td>
+      <td><%= tag.locale_id %></td>
+      <td><%= tag.media_type_id %></td>
+      <td><%= tag.codec_id %></td>
+      <td><%= tag.title %></td>
+      <td><%= tag.subtitle %></td>
+      <td><%= tag.summary %></td>
+      <td><%= tag.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.tag_path(@conn, :show, tag) %></span>
+        <span><%= link "Edit", to: Routes.tag_path(@conn, :edit, tag) %></span>
+        <span><%= link "Delete", to: Routes.tag_path(@conn, :delete, tag), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Tag", to: Routes.tag_path(@conn, :new) %></span>

@@ -1,0 +1,5 @@
+<h1>New Link contact</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.uri_contact_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.uri_contact_path(@conn, :index) %></span>

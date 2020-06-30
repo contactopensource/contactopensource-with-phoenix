@@ -16,7 +16,8 @@ defmodule ContactWeb.Api.EdgeControllerTest do
     predicate_schema: "some predicate_schema",
     predicate_table: "some predicate_table",
     predicate_uri: "some predicate_uri",
-    probability: "120.5",
+    unit_interval: "120.5",
+    dual_interval: "120.5",
     start_at_timestamp_utc: ~N[2010-04-17 14:00:00],
     state_text: "some state_text",
     state_uri: "some state_uri",
@@ -46,7 +47,8 @@ defmodule ContactWeb.Api.EdgeControllerTest do
     predicate_schema: "some updated predicate_schema",
     predicate_table: "some updated predicate_table",
     predicate_uri: "some updated predicate_uri",
-    probability: "456.7",
+    unit_interval: "456.7",
+    dual_interval: "456.7",
     start_at_timestamp_utc: ~N[2011-05-18 15:01:01],
     state_text: "some updated state_text",
     state_uri: "some updated state_uri",
@@ -64,7 +66,7 @@ defmodule ContactWeb.Api.EdgeControllerTest do
     updated_by_text: "some updated updated_by_text",
     weight: "456.7"
   }
-  @invalid_attrs %{count: nil, object_database: nil, object_id: nil, object_schema: nil, object_table: nil, object_uri: nil, predicate_database: nil, predicate_id: nil, predicate_schema: nil, predicate_table: nil, predicate_uri: nil, probability: nil, start_at_timestamp_utc: nil, state_text: nil, state_uri: nil, stop_at_timestamp_utc: nil, subject_database: nil, subject_id: nil, subject_schema: nil, subject_table: nil, subject_uri: nil, tenant_id: nil, type_text: nil, type_uri: nil, updated_at_clock_count: nil, updated_at_timestamp_utc: nil, updated_by_text: nil, weight: nil}
+  @invalid_attrs %{count: nil, object_database: nil, object_id: nil, object_schema: nil, object_table: nil, object_uri: nil, predicate_database: nil, predicate_id: nil, predicate_schema: nil, predicate_table: nil, predicate_uri: nil, unit_interval: nil, dual_interval: nil, start_at_timestamp_utc: nil, state_text: nil, state_uri: nil, stop_at_timestamp_utc: nil, subject_database: nil, subject_id: nil, subject_schema: nil, subject_table: nil, subject_uri: nil, tenant_id: nil, type_text: nil, type_uri: nil, updated_at_clock_count: nil, updated_at_timestamp_utc: nil, updated_by_text: nil, weight: nil}
 
   def fixture(:edge) do
     {:ok, edge} = Graph.create_edge(@create_attrs)
@@ -102,7 +104,8 @@ defmodule ContactWeb.Api.EdgeControllerTest do
                "predicate_schema" => "some predicate_schema",
                "predicate_table" => "some predicate_table",
                "predicate_uri" => "some predicate_uri",
-               "probability" => "120.5",
+               "unit_interval" => "120.5",
+               "dual_interval" => "120.5",
                "start_at_timestamp_utc" => "2010-04-17T14:00:00",
                "state_text" => "some state_text",
                "state_uri" => "some state_uri",
@@ -150,7 +153,8 @@ defmodule ContactWeb.Api.EdgeControllerTest do
                "predicate_schema" => "some updated predicate_schema",
                "predicate_table" => "some updated predicate_table",
                "predicate_uri" => "some updated predicate_uri",
-               "probability" => "456.7",
+               "unit_interval" => "456.7",
+               "dual_interval" => "456.7",
                "start_at_timestamp_utc" => "2011-05-18T15:01:01",
                "state_text" => "some updated state_text",
                "state_uri" => "some updated state_uri",

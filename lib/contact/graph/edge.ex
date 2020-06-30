@@ -14,7 +14,8 @@ defmodule Contact.Graph.Edge do
     field :predicate_schema, :string
     field :predicate_table, :string
     field :predicate_uri, :string
-    field :probability, :decimal
+    field :unit_interval, :decimal
+    field :dual_interval, :decimal
     field :start_at_timestamp_utc, :naive_datetime
     field :state_text, :string
     field :state_uri, :string
@@ -38,7 +39,7 @@ defmodule Contact.Graph.Edge do
   @doc false
   def changeset(edge, attrs) do
     edge
-    |> cast(attrs, [:tenant_id, :type_uri, :type_text, :state_uri, :state_text, :updated_at_timestamp_utc, :updated_at_clock_count, :updated_by_text, :subject_uri, :subject_database, :subject_schema, :subject_table, :subject_id, :predicate_uri, :predicate_database, :predicate_schema, :predicate_table, :predicate_id, :object_uri, :object_database, :object_schema, :object_table, :object_id, :start_at_timestamp_utc, :stop_at_timestamp_utc, :count, :weight, :probability])
-    |> validate_required([:tenant_id, :type_uri, :type_text, :state_uri, :state_text, :updated_at_timestamp_utc, :updated_at_clock_count, :updated_by_text, :subject_uri, :subject_database, :subject_schema, :subject_table, :subject_id, :predicate_uri, :predicate_database, :predicate_schema, :predicate_table, :predicate_id, :object_uri, :object_database, :object_schema, :object_table, :object_id, :start_at_timestamp_utc, :stop_at_timestamp_utc, :count, :weight, :probability])
+    |> cast(attrs, [:tenant_id, :type_uri, :type_text, :state_uri, :state_text, :updated_at_timestamp_utc, :updated_at_clock_count, :updated_by_text, :subject_uri, :subject_database, :subject_schema, :subject_table, :subject_id, :predicate_uri, :predicate_database, :predicate_schema, :predicate_table, :predicate_id, :object_uri, :object_database, :object_schema, :object_table, :object_id, :start_at_timestamp_utc, :stop_at_timestamp_utc, :count, :weight, :unit_interval, :dual_interval])
+    |> validate_required([:tenant_id, :type_uri, :type_text, :state_uri, :state_text, :updated_at_timestamp_utc, :updated_at_clock_count, :updated_by_text, :subject_uri, :subject_database, :subject_schema, :subject_table, :subject_id, :predicate_uri, :predicate_database, :predicate_schema, :predicate_table, :predicate_id, :object_uri, :object_database, :object_schema, :object_table, :object_id, :start_at_timestamp_utc, :stop_at_timestamp_utc, :count, :weight, :unit_interval, :dual_interval])
   end
 end

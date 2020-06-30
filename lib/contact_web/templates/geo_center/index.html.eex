@@ -1,0 +1,44 @@
+<h1>Listing Geo centers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Center as geo point</th>
+      <th>Spread as meters</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for geo_center <- @geo_centers do %>
+    <tr>
+      <td><%= geo_center.created_at_timestamp_utc %></td>
+      <td><%= geo_center.created_at_clock_count %></td>
+      <td><%= geo_center.updated_at_timestamp_utc %></td>
+      <td><%= geo_center.updated_at_clock_count %></td>
+      <td><%= geo_center.updated_by_uri %></td>
+      <td><%= geo_center.tenant_uri %></td>
+      <td><%= geo_center.type_uri %></td>
+      <td><%= geo_center.state_uri %></td>
+      <td><%= geo_center.center_as_geo_point_id %></td>
+      <td><%= geo_center.spread_as_meters %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.geo_center_path(@conn, :show, geo_center) %></span>
+        <span><%= link "Edit", to: Routes.geo_center_path(@conn, :edit, geo_center) %></span>
+        <span><%= link "Delete", to: Routes.geo_center_path(@conn, :delete, geo_center), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Geo center", to: Routes.geo_center_path(@conn, :new) %></span>

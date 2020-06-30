@@ -1,5 +1,5 @@
-defmodule CommissaryPhoenix.Repo.Migrations.AddAutoinc do
-  @moduledoc "Add autoinc so Postgres can automatically increment"
+defmodule CommissaryPhoenix.Repo.Migrations.CreateExtensionAutoInc do
+  @moduledoc "Create extension \"autoinc\" so Postgres can automatically increment"
   use Ecto.Migration
 
   def change do

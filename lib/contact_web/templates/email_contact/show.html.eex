@@ -1,0 +1,63 @@
+<h1>Show Email contact</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @email_contact.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @email_contact.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @email_contact.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @email_contact.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @email_contact.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @email_contact.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @email_contact.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @email_contact.state_uri %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @email_contact.address %>
+  </li>
+
+  <li>
+    <strong>Display name:</strong>
+    <%= @email_contact.display_name %>
+  </li>
+
+  <li>
+    <strong>Addr spec:</strong>
+    <%= @email_contact.addr_spec %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.email_contact_path(@conn, :edit, @email_contact) %></span>
+<span><%= link "Back", to: Routes.email_contact_path(@conn, :index) %></span>

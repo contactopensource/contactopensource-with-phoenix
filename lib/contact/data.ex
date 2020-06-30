@@ -197,4 +197,196 @@ defmodule Contact.Data do
   def change_unit(%Unit{} = unit) do
     Unit.changeset(unit, %{})
   end
+
+  alias Contact.Data.MediaType
+
+  @doc """
+  Returns the list of media_types.
+
+  ## Examples
+
+      iex> list_media_types()
+      [%MediaType{}, ...]
+
+  """
+  def list_media_types do
+    Repo.all(MediaType)
+  end
+
+  @doc """
+  Gets a single media_type.
+
+  Raises `Ecto.NoResultsError` if the Media type does not exist.
+
+  ## Examples
+
+      iex> get_media_type!(123)
+      %MediaType{}
+
+      iex> get_media_type!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_media_type!(id), do: Repo.get!(MediaType, id)
+
+  @doc """
+  Creates a media_type.
+
+  ## Examples
+
+      iex> create_media_type(%{field: value})
+      {:ok, %MediaType{}}
+
+      iex> create_media_type(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_media_type(attrs \\ %{}) do
+    %MediaType{}
+    |> MediaType.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a media_type.
+
+  ## Examples
+
+      iex> update_media_type(media_type, %{field: new_value})
+      {:ok, %MediaType{}}
+
+      iex> update_media_type(media_type, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_media_type(%MediaType{} = media_type, attrs) do
+    media_type
+    |> MediaType.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a MediaType.
+
+  ## Examples
+
+      iex> delete_media_type(media_type)
+      {:ok, %MediaType{}}
+
+      iex> delete_media_type(media_type)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_media_type(%MediaType{} = media_type) do
+    Repo.delete(media_type)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking media_type changes.
+
+  ## Examples
+
+      iex> change_media_type(media_type)
+      %Ecto.Changeset{source: %MediaType{}}
+
+  """
+  def change_media_type(%MediaType{} = media_type) do
+    MediaType.changeset(media_type, %{})
+  end
+
+  alias Contact.Data.Codec
+
+  @doc """
+  Returns the list of codecs.
+
+  ## Examples
+
+      iex> list_codecs()
+      [%Codec{}, ...]
+
+  """
+  def list_codecs do
+    Repo.all(Codec)
+  end
+
+  @doc """
+  Gets a single codec.
+
+  Raises `Ecto.NoResultsError` if the Codec does not exist.
+
+  ## Examples
+
+      iex> get_codec!(123)
+      %Codec{}
+
+      iex> get_codec!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_codec!(id), do: Repo.get!(Codec, id)
+
+  @doc """
+  Creates a codec.
+
+  ## Examples
+
+      iex> create_codec(%{field: value})
+      {:ok, %Codec{}}
+
+      iex> create_codec(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_codec(attrs \\ %{}) do
+    %Codec{}
+    |> Codec.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a codec.
+
+  ## Examples
+
+      iex> update_codec(codec, %{field: new_value})
+      {:ok, %Codec{}}
+
+      iex> update_codec(codec, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_codec(%Codec{} = codec, attrs) do
+    codec
+    |> Codec.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Codec.
+
+  ## Examples
+
+      iex> delete_codec(codec)
+      {:ok, %Codec{}}
+
+      iex> delete_codec(codec)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_codec(%Codec{} = codec) do
+    Repo.delete(codec)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking codec changes.
+
+  ## Examples
+
+      iex> change_codec(codec)
+      %Ecto.Changeset{source: %Codec{}}
+
+  """
+  def change_codec(%Codec{} = codec) do
+    Codec.changeset(codec, %{})
+  end
 end

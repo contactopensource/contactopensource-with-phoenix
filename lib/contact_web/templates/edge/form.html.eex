@@ -113,9 +113,13 @@
   <%= number_input f, :weight, step: "any" %>
   <%= error_tag f, :weight %>
 
-  <%= label f, :probability %>
-  <%= number_input f, :probability, step: "any" %>
-  <%= error_tag f, :probability %>
+  <%= label f, :unit_interval %>
+  <%= number_input f, :unit_interval, step: "any" %>
+  <%= error_tag f, :unit_interval %>
+
+  <%= label f, :dual_interval %>
+  <%= number_input f, :dual_interval, step: "any" %>
+  <%= error_tag f, :dual_interval %>
 
   <div>
     <%= submit "Save" %>

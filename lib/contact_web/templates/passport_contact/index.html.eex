@@ -1,0 +1,48 @@
+<h1>Listing Passport contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Country text</th>
+      <th>Number text</th>
+      <th>Valid start date</th>
+      <th>Valid stop date</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for passport_contact <- @passport_contacts do %>
+    <tr>
+      <td><%= passport_contact.created_at_timestamp_utc %></td>
+      <td><%= passport_contact.created_at_clock_count %></td>
+      <td><%= passport_contact.updated_at_timestamp_utc %></td>
+      <td><%= passport_contact.updated_at_clock_count %></td>
+      <td><%= passport_contact.updated_by_uri %></td>
+      <td><%= passport_contact.tenant_uri %></td>
+      <td><%= passport_contact.type_uri %></td>
+      <td><%= passport_contact.state_uri %></td>
+      <td><%= passport_contact.country_text %></td>
+      <td><%= passport_contact.number_text %></td>
+      <td><%= passport_contact.valid_start_date %></td>
+      <td><%= passport_contact.valid_stop_date %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.passport_contact_path(@conn, :show, passport_contact) %></span>
+        <span><%= link "Edit", to: Routes.passport_contact_path(@conn, :edit, passport_contact) %></span>
+        <span><%= link "Delete", to: Routes.passport_contact_path(@conn, :delete, passport_contact), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Passport contact", to: Routes.passport_contact_path(@conn, :new) %></span>

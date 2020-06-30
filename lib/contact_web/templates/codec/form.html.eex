@@ -1,0 +1,123 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :created_at_timestamp_utc %>
+  <%= datetime_select f, :created_at_timestamp_utc %>
+  <%= error_tag f, :created_at_timestamp_utc %>
+
+  <%= label f, :created_at_clock_count %>
+  <%= number_input f, :created_at_clock_count %>
+  <%= error_tag f, :created_at_clock_count %>
+
+  <%= label f, :updated_at_timestamp_utc %>
+  <%= datetime_select f, :updated_at_timestamp_utc %>
+  <%= error_tag f, :updated_at_timestamp_utc %>
+
+  <%= label f, :updated_at_clock_count %>
+  <%= number_input f, :updated_at_clock_count %>
+  <%= error_tag f, :updated_at_clock_count %>
+
+  <%= label f, :updated_by_uri %>
+  <%= textarea f, :updated_by_uri %>
+  <%= error_tag f, :updated_by_uri %>
+
+  <%= label f, :tenant_uri %>
+  <%= textarea f, :tenant_uri %>
+  <%= error_tag f, :tenant_uri %>
+
+  <%= label f, :type_uri %>
+  <%= textarea f, :type_uri %>
+  <%= error_tag f, :type_uri %>
+
+  <%= label f, :state_uri %>
+  <%= textarea f, :state_uri %>
+  <%= error_tag f, :state_uri %>
+
+  <%= label f, :set_id %>
+  <%= text_input f, :set_id %>
+  <%= error_tag f, :set_id %>
+
+  <%= label f, :parent_id %>
+  <%= text_input f, :parent_id %>
+  <%= error_tag f, :parent_id %>
+
+  <%= label f, :name %>
+  <%= textarea f, :name %>
+  <%= error_tag f, :name %>
+
+  <%= label f, :code %>
+  <%= textarea f, :code %>
+  <%= error_tag f, :code %>
+
+  <%= label f, :icon %>
+  <%= textarea f, :icon %>
+  <%= error_tag f, :icon %>
+
+  <%= label f, :link %>
+  <%= textarea f, :link %>
+  <%= error_tag f, :link %>
+
+  <%= label f, :note %>
+  <%= textarea f, :note %>
+  <%= error_tag f, :note %>
+
+  <%= label f, :creator_name %>
+  <%= textarea f, :creator_name %>
+  <%= error_tag f, :creator_name %>
+
+  <%= label f, :prefer_file_extension %>
+  <%= textarea f, :prefer_file_extension %>
+  <%= error_tag f, :prefer_file_extension %>
+
+  <%= label f, :prefer_media_type_id %>
+  <%= text_input f, :prefer_media_type_id %>
+  <%= error_tag f, :prefer_media_type_id %>
+
+  <%= label f, :lossy_flag %>
+  <%= checkbox f, :lossy_flag %>
+  <%= error_tag f, :lossy_flag %>
+
+  <%= label f, :floss_flag %>
+  <%= checkbox f, :floss_flag %>
+  <%= error_tag f, :floss_flag %>
+
+  <%= label f, :bit_rate %>
+  <%= number_input f, :bit_rate, step: "any" %>
+  <%= error_tag f, :bit_rate %>
+
+  <%= label f, :bit_rate_minimum %>
+  <%= number_input f, :bit_rate_minimum, step: "any" %>
+  <%= error_tag f, :bit_rate_minimum %>
+
+  <%= label f, :bit_rate_maximum %>
+  <%= number_input f, :bit_rate_maximum, step: "any" %>
+  <%= error_tag f, :bit_rate_maximum %>
+
+  <%= label f, :variable_bit_rate_flag %>
+  <%= checkbox f, :variable_bit_rate_flag %>
+  <%= error_tag f, :variable_bit_rate_flag %>
+
+  <%= label f, :channel_count %>
+  <%= number_input f, :channel_count %>
+  <%= error_tag f, :channel_count %>
+
+  <%= label f, :channel_count_minimum %>
+  <%= number_input f, :channel_count_minimum %>
+  <%= error_tag f, :channel_count_minimum %>
+
+  <%= label f, :channel_count_maximum %>
+  <%= number_input f, :channel_count_maximum %>
+  <%= error_tag f, :channel_count_maximum %>
+
+  <%= label f, :variable_channel_count_flag %>
+  <%= checkbox f, :variable_channel_count_flag %>
+  <%= error_tag f, :variable_channel_count_flag %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

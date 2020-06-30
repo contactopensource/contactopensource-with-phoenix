@@ -1,0 +1,5 @@
+<h1>Edit Geo point</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.geo_point_path(@conn, :update, @geo_point)) %>
+
+<span><%= link "Back", to: Routes.geo_point_path(@conn, :index) %></span>

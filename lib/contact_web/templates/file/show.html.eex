@@ -1,0 +1,83 @@
+<h1>Show File</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @file.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @file.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @file.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @file.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @file.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @file.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @file.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @file.state_uri %>
+  </li>
+
+  <li>
+    <strong>Locale:</strong>
+    <%= @file.locale_id %>
+  </li>
+
+  <li>
+    <strong>Media type:</strong>
+    <%= @file.media_type_id %>
+  </li>
+
+  <li>
+    <strong>Codec:</strong>
+    <%= @file.codec_id %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @file.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @file.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @file.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @file.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.file_path(@conn, :edit, @file) %></span>
+<span><%= link "Back", to: Routes.file_path(@conn, :index) %></span>

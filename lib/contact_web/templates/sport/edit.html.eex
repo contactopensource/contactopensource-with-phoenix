@@ -1,0 +1,5 @@
+<h1>Edit Sport</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.sport_path(@conn, :update, @sport)) %>
+
+<span><%= link "Back", to: Routes.sport_path(@conn, :index) %></span>

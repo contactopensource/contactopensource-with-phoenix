@@ -1,0 +1,93 @@
+<h1>Show Postal contact</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @postal_contact.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @postal_contact.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @postal_contact.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @postal_contact.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @postal_contact.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @postal_contact.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @postal_contact.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @postal_contact.state_uri %>
+  </li>
+
+  <li>
+    <strong>Freeform:</strong>
+    <%= @postal_contact.freeform %>
+  </li>
+
+  <li>
+    <strong>Country text:</strong>
+    <%= @postal_contact.country_text %>
+  </li>
+
+  <li>
+    <strong>Region text:</strong>
+    <%= @postal_contact.region_text %>
+  </li>
+
+  <li>
+    <strong>Locality text:</strong>
+    <%= @postal_contact.locality_text %>
+  </li>
+
+  <li>
+    <strong>Neighborhood text:</strong>
+    <%= @postal_contact.neighborhood_text %>
+  </li>
+
+  <li>
+    <strong>Postal code text:</strong>
+    <%= @postal_contact.postal_code_text %>
+  </li>
+
+  <li>
+    <strong>Street address text:</strong>
+    <%= @postal_contact.street_address_text %>
+  </li>
+
+  <li>
+    <strong>Premise address text:</strong>
+    <%= @postal_contact.premise_address_text %>
+  </li>
+
+  <li>
+    <strong>Global location number text:</strong>
+    <%= @postal_contact.global_location_number_text %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.postal_contact_path(@conn, :edit, @postal_contact) %></span>
+<span><%= link "Back", to: Routes.postal_contact_path(@conn, :index) %></span>

@@ -39,6 +39,8 @@ defmodule ContactWeb.Api.EdgeView do
       stop_at_timestamp_utc: edge.stop_at_timestamp_utc,
       count: edge.count,
       weight: edge.weight,
-      probability: edge.probability}
+      unit_interval: edge.unit_interval,
+      dual_interval: edge.dual_interval,
+    }
   end
 end

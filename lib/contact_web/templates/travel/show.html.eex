@@ -1,0 +1,68 @@
+<h1>Show Travel</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @travel.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @travel.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @travel.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @travel.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @travel.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @travel.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @travel.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @travel.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @travel.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @travel.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @travel.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @travel.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.travel_path(@conn, :edit, @travel) %></span>
+<span><%= link "Back", to: Routes.travel_path(@conn, :index) %></span>

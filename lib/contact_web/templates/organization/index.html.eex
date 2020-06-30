@@ -1,0 +1,48 @@
+<h1>Listing Organizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Summary</th>
+      <th>Saga</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for organization <- @organizations do %>
+    <tr>
+      <td><%= organization.created_at_timestamp_utc %></td>
+      <td><%= organization.created_at_clock_count %></td>
+      <td><%= organization.updated_at_timestamp_utc %></td>
+      <td><%= organization.updated_at_clock_count %></td>
+      <td><%= organization.updated_by_uri %></td>
+      <td><%= organization.tenant_uri %></td>
+      <td><%= organization.type_uri %></td>
+      <td><%= organization.state_uri %></td>
+      <td><%= organization.title %></td>
+      <td><%= organization.subtitle %></td>
+      <td><%= organization.summary %></td>
+      <td><%= organization.saga %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.organization_path(@conn, :show, organization) %></span>
+        <span><%= link "Edit", to: Routes.organization_path(@conn, :edit, organization) %></span>
+        <span><%= link "Delete", to: Routes.organization_path(@conn, :delete, organization), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Organization", to: Routes.organization_path(@conn, :new) %></span>

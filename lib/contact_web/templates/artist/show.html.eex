@@ -1,0 +1,68 @@
+<h1>Show Artist</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @artist.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @artist.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @artist.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @artist.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @artist.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @artist.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @artist.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @artist.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @artist.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @artist.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @artist.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @artist.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.artist_path(@conn, :edit, @artist) %></span>
+<span><%= link "Back", to: Routes.artist_path(@conn, :index) %></span>

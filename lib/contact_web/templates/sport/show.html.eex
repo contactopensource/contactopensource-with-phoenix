@@ -1,0 +1,68 @@
+<h1>Show Sport</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @sport.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @sport.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @sport.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @sport.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @sport.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @sport.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @sport.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @sport.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @sport.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @sport.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @sport.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @sport.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.sport_path(@conn, :edit, @sport) %></span>
+<span><%= link "Back", to: Routes.sport_path(@conn, :index) %></span>

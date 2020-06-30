@@ -1,0 +1,83 @@
+<h1>Show Person pronoun kit</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @person_pronoun_kit.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @person_pronoun_kit.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @person_pronoun_kit.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @person_pronoun_kit.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @person_pronoun_kit.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @person_pronoun_kit.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @person_pronoun_kit.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @person_pronoun_kit.state_uri %>
+  </li>
+
+  <li>
+    <strong>Subject pronoun:</strong>
+    <%= @person_pronoun_kit.subject_pronoun %>
+  </li>
+
+  <li>
+    <strong>Object pronoun:</strong>
+    <%= @person_pronoun_kit.object_pronoun %>
+  </li>
+
+  <li>
+    <strong>Dependent possessive pronoun:</strong>
+    <%= @person_pronoun_kit.dependent_possessive_pronoun %>
+  </li>
+
+  <li>
+    <strong>Independent possessive pronoun:</strong>
+    <%= @person_pronoun_kit.independent_possessive_pronoun %>
+  </li>
+
+  <li>
+    <strong>Reflexive pronoun:</strong>
+    <%= @person_pronoun_kit.reflexive_pronoun %>
+  </li>
+
+  <li>
+    <strong>Intensive pronoun:</strong>
+    <%= @person_pronoun_kit.intensive_pronoun %>
+  </li>
+
+  <li>
+    <strong>Disjunctive pronoun:</strong>
+    <%= @person_pronoun_kit.disjunctive_pronoun %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.person_pronoun_kit_path(@conn, :edit, @person_pronoun_kit) %></span>
+<span><%= link "Back", to: Routes.person_pronoun_kit_path(@conn, :index) %></span>

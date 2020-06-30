@@ -1,0 +1,68 @@
+<h1>Show Job</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @job.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @job.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @job.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @job.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @job.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @job.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @job.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @job.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @job.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @job.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @job.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @job.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.job_path(@conn, :edit, @job) %></span>
+<span><%= link "Back", to: Routes.job_path(@conn, :index) %></span>

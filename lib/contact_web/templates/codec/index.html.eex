@@ -1,0 +1,80 @@
+<h1>Listing Codecs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at timestamp utc</th>
+      <th>Created at clock count</th>
+      <th>Updated at timestamp utc</th>
+      <th>Updated at clock count</th>
+      <th>Updated by uri</th>
+      <th>Tenant uri</th>
+      <th>Type uri</th>
+      <th>State uri</th>
+      <th>Set</th>
+      <th>Parent</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Icon</th>
+      <th>Link</th>
+      <th>Note</th>
+      <th>Creator name</th>
+      <th>Prefer file extension</th>
+      <th>Prefer media type</th>
+      <th>Lossy flag</th>
+      <th>Floss flag</th>
+      <th>Bit rate</th>
+      <th>Bit rate minimum</th>
+      <th>Bit rate maximum</th>
+      <th>Variable bit rate flag</th>
+      <th>Channel count</th>
+      <th>Channel count minimum</th>
+      <th>Channel count maximum</th>
+      <th>Variable channel count flag</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for codec <- @codecs do %>
+    <tr>
+      <td><%= codec.created_at_timestamp_utc %></td>
+      <td><%= codec.created_at_clock_count %></td>
+      <td><%= codec.updated_at_timestamp_utc %></td>
+      <td><%= codec.updated_at_clock_count %></td>
+      <td><%= codec.updated_by_uri %></td>
+      <td><%= codec.tenant_uri %></td>
+      <td><%= codec.type_uri %></td>
+      <td><%= codec.state_uri %></td>
+      <td><%= codec.set_id %></td>
+      <td><%= codec.parent_id %></td>
+      <td><%= codec.name %></td>
+      <td><%= codec.code %></td>
+      <td><%= codec.icon %></td>
+      <td><%= codec.link %></td>
+      <td><%= codec.note %></td>
+      <td><%= codec.creator_name %></td>
+      <td><%= codec.prefer_file_extension %></td>
+      <td><%= codec.prefer_media_type_id %></td>
+      <td><%= codec.lossy_flag %></td>
+      <td><%= codec.floss_flag %></td>
+      <td><%= codec.bit_rate %></td>
+      <td><%= codec.bit_rate_minimum %></td>
+      <td><%= codec.bit_rate_maximum %></td>
+      <td><%= codec.variable_bit_rate_flag %></td>
+      <td><%= codec.channel_count %></td>
+      <td><%= codec.channel_count_minimum %></td>
+      <td><%= codec.channel_count_maximum %></td>
+      <td><%= codec.variable_channel_count_flag %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.codec_path(@conn, :show, codec) %></span>
+        <span><%= link "Edit", to: Routes.codec_path(@conn, :edit, codec) %></span>
+        <span><%= link "Delete", to: Routes.codec_path(@conn, :delete, codec), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Codec", to: Routes.codec_path(@conn, :new) %></span>

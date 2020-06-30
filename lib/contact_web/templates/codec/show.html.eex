@@ -1,0 +1,148 @@
+<h1>Show Codec</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @codec.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @codec.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @codec.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @codec.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @codec.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @codec.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @codec.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @codec.state_uri %>
+  </li>
+
+  <li>
+    <strong>Set:</strong>
+    <%= @codec.set_id %>
+  </li>
+
+  <li>
+    <strong>Parent:</strong>
+    <%= @codec.parent_id %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @codec.name %>
+  </li>
+
+  <li>
+    <strong>Code:</strong>
+    <%= @codec.code %>
+  </li>
+
+  <li>
+    <strong>Icon:</strong>
+    <%= @codec.icon %>
+  </li>
+
+  <li>
+    <strong>Link:</strong>
+    <%= @codec.link %>
+  </li>
+
+  <li>
+    <strong>Note:</strong>
+    <%= @codec.note %>
+  </li>
+
+  <li>
+    <strong>Creator name:</strong>
+    <%= @codec.creator_name %>
+  </li>
+
+  <li>
+    <strong>Prefer file extension:</strong>
+    <%= @codec.prefer_file_extension %>
+  </li>
+
+  <li>
+    <strong>Prefer media type:</strong>
+    <%= @codec.prefer_media_type_id %>
+  </li>
+
+  <li>
+    <strong>Lossy flag:</strong>
+    <%= @codec.lossy_flag %>
+  </li>
+
+  <li>
+    <strong>Floss flag:</strong>
+    <%= @codec.floss_flag %>
+  </li>
+
+  <li>
+    <strong>Bit rate:</strong>
+    <%= @codec.bit_rate %>
+  </li>
+
+  <li>
+    <strong>Bit rate minimum:</strong>
+    <%= @codec.bit_rate_minimum %>
+  </li>
+
+  <li>
+    <strong>Bit rate maximum:</strong>
+    <%= @codec.bit_rate_maximum %>
+  </li>
+
+  <li>
+    <strong>Variable bit rate flag:</strong>
+    <%= @codec.variable_bit_rate_flag %>
+  </li>
+
+  <li>
+    <strong>Channel count:</strong>
+    <%= @codec.channel_count %>
+  </li>
+
+  <li>
+    <strong>Channel count minimum:</strong>
+    <%= @codec.channel_count_minimum %>
+  </li>
+
+  <li>
+    <strong>Channel count maximum:</strong>
+    <%= @codec.channel_count_maximum %>
+  </li>
+
+  <li>
+    <strong>Variable channel count flag:</strong>
+    <%= @codec.variable_channel_count_flag %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.codec_path(@conn, :edit, @codec) %></span>
+<span><%= link "Back", to: Routes.codec_path(@conn, :index) %></span>

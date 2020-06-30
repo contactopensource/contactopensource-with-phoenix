@@ -1,0 +1,88 @@
+<h1>Show Phone contact</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @phone_contact.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @phone_contact.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @phone_contact.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @phone_contact.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @phone_contact.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @phone_contact.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @phone_contact.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @phone_contact.state_uri %>
+  </li>
+
+  <li>
+    <strong>Label:</strong>
+    <%= @phone_contact.label %>
+  </li>
+
+  <li>
+    <strong>Number text:</strong>
+    <%= @phone_contact.number_text %>
+  </li>
+
+  <li>
+    <strong>E164 text:</strong>
+    <%= @phone_contact.e164_text %>
+  </li>
+
+  <li>
+    <strong>E164 country code:</strong>
+    <%= @phone_contact.e164_country_code %>
+  </li>
+
+  <li>
+    <strong>E164 national destination code:</strong>
+    <%= @phone_contact.e164_national_destination_code %>
+  </li>
+
+  <li>
+    <strong>E164 group identification code:</strong>
+    <%= @phone_contact.e164_group_identification_code %>
+  </li>
+
+  <li>
+    <strong>E164 trial identification code:</strong>
+    <%= @phone_contact.e164_trial_identification_code %>
+  </li>
+
+  <li>
+    <strong>E164 subscriber number:</strong>
+    <%= @phone_contact.e164_subscriber_number %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.phone_contact_path(@conn, :edit, @phone_contact) %></span>
+<span><%= link "Back", to: Routes.phone_contact_path(@conn, :index) %></span>

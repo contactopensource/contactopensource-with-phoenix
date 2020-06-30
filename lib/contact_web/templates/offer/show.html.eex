@@ -1,0 +1,68 @@
+<h1>Show Offer</h1>
+
+<ul>
+
+  <li>
+    <strong>Created at timestamp utc:</strong>
+    <%= @offer.created_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Created at clock count:</strong>
+    <%= @offer.created_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated at timestamp utc:</strong>
+    <%= @offer.updated_at_timestamp_utc %>
+  </li>
+
+  <li>
+    <strong>Updated at clock count:</strong>
+    <%= @offer.updated_at_clock_count %>
+  </li>
+
+  <li>
+    <strong>Updated by uri:</strong>
+    <%= @offer.updated_by_uri %>
+  </li>
+
+  <li>
+    <strong>Tenant uri:</strong>
+    <%= @offer.tenant_uri %>
+  </li>
+
+  <li>
+    <strong>Type uri:</strong>
+    <%= @offer.type_uri %>
+  </li>
+
+  <li>
+    <strong>State uri:</strong>
+    <%= @offer.state_uri %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @offer.title %>
+  </li>
+
+  <li>
+    <strong>Subtitle:</strong>
+    <%= @offer.subtitle %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @offer.summary %>
+  </li>
+
+  <li>
+    <strong>Saga:</strong>
+    <%= @offer.saga %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.offer_path(@conn, :edit, @offer) %></span>
+<span><%= link "Back", to: Routes.offer_path(@conn, :index) %></span>
